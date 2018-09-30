@@ -1,0 +1,150 @@
+main {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+  /*background-color: #ccc;*/
+}
+
+section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+}
+
+section:first-child {
+  height: 70vh;
+}
+
+section:first-child h1 {
+  color: white;
+  font-size: 150%;
+  text-shadow: 0 0 8px #000;
+  position: absolute;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.parallax span {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.74);
+  /* Force the background image to fill the whole element. */
+  /*background-size: 100%;
+   Keep the image from overlapping sibling elements. */
+  z-index: -1;
+
+}
+
+.mask {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60%;
+  width: 100%;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+/* The styling for the static div. */
+.static {
+  background: white;
+  box-shadow: var(--box-shadow-3dp-reverse);
+  padding-bottom: 10vh;
+}
+
+.text-section {
+  padding: 8vh 0 5vh 0;
+}
+
+.project-time {
+  font-family: Times !important;
+  color: #777 !important;
+}
+
+.abstract {
+  font-style: italic;
+  width: 80%;
+  font-family: Times !important;
+  margin: 1em auto;
+
+}
+
+.in-text-img img {
+  width: 100%;
+}
+
+.in-text-img p {
+  font-size: 80%;
+  text-align: right;
+  color: #777;
+}
+
+.in-text-img.small-img img{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+
+}
+
+/* the check-out-more box at the bottom */
+.check-out-more-box {
+  display: block;
+  box-shadow: var(--box-shadow-3dp);
+  padding: 15px 0;
+  margin: 2em auto;
+  border: 1px solid var(--border-color);
+  font-family: sans-serif;
+  font-weight: 500;
+  max-width: 320px;
+}
+
+.check-out-more-box p {
+  margin: 0.5em 1em;
+}
+
+.check-out-more-anchor {
+  text-decoration: none;
+}
+
+.check-out-more-label {
+  font-size: 80%;
+  color: #777;
+}
+
+.check-out-more-title {
+  font-size: 100%;
+  font-weight: 700;
+  color: var(--p-font-color);
+}
+
+.check-out-more-description {
+  font-size: 100%;
+  color: #777;
+}
+
+.check-out-more-box:hover {
+  box-shadow: var(--box-shadow-8dp);
+}

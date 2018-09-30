@@ -1,0 +1,110 @@
+/* begin: flip cards */
+
+.slick-list {
+	height: 400px;
+}
+
+.slick-track {
+	height: 376px;
+}
+
+.flipCardContainer {
+	width: 290px;
+	height: 380px;
+	border: 1px solid var(--border-color);
+	box-shadow: var(--box-shadow-3dp);
+	border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+	font-family: sans-serif;
+	margin: 12px 6px;
+}
+
+.flipCardContainer:hover {
+	box-shadow: var(--box-shadow-8dp);
+	border-color: #00000030;
+	transition: 0.2s ease-in-out;
+}
+
+.imageContainer {
+	width: 100%;
+	height: 130px;
+	overflow: hidden;
+	position: relative;
+}
+
+.imageContainer img{
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.textContainer {
+	margin: 1em;
+	text-align: left;
+	/*border: 1px solid black;*/
+}
+
+main {
+	padding-top: 120px;
+}
+
+h2 {
+	margin:0;
+	font-weight: 500;
+	font-size: 140%;
+}
+
+.textContainer p {
+	max-height: 6em;
+	font-size: 80%;
+	overflow: auto;
+}
+
+.bottomActionButton {
+	text-align: center;
+	line-height: 3em;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	height: 3em;
+	cursor: pointer;
+	color: var(--actions-color);
+	letter-spacing: 0.1em;
+	font-weight: 200;
+	background-color: white;
+}
+
+.bottomActionButton:hover {
+	color: #9b616e;
+	transition: ease-in-out 0.2s;
+}
+
+.bottomActionButton::before {
+	content: '';
+	width: 94%;
+	height: 1px;
+	background-color: var(--border-color);
+	position: absolute;
+	top:0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* end: flip cards */
+
+/* desktop */
+@media only screen and (min-width: 1024px) {
+    .flipCardContainer {
+    	display: inline-block;
+    }
+
+    .flipCards {
+    	text-align: center;
+    }
+
+}
