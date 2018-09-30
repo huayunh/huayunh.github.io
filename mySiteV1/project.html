@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- js -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+  <script type="text/javascript" src="js/project.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/global.css">
+  <link rel="stylesheet" type="text/css" href="css/project.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100|Spectral+SC:300" rel="stylesheet">
+
+  <!-- misc -->
+  <meta charset="utf-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>Huayun</title>
+
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+
+    <div class="nav-title center noselect">projects</div>
+    <a href="index.html"><img id="logo" src="assets/logo.svg" /></a>
+    <ul class="nav-title-desktop noselect serif">
+      <li><a href="contact.html">contact</a></li>
+      <li><a href="facts.html"  >facts</a></li>
+      <li class="selected"      >project</a></li>
+      <li><a href="about.html"  >about</a></li>
+
+    </ul>
+  </nav>
+  <br><br><div class="anchorText" id="MindSweeper"></div>
+  <main>
+    <div id="left-column">
+      <section>
+        <h1>MindSweeper, Spring 2017</h1>
+        <p class="block-cite">With the concept of crowd sourcing, a cell will not be revealed unless 
+          decided by the majority vote.</p>
+          <div class="media"><div style="position:relative;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/wAmqmo8ANxw?list=PLDF9wPFE6svV8Ne7RA16nnvqRzsdfjMwr&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div></div>
+        <p>With socket.io, MindSweeper takes odd number of
+          players to play on one single minesweeper map. Once we
+          get more than half of the players voting one specific 
+          cell to be containing a mine, then the mine will get 
+          "clicked" and the contents will finally be revealed. It is a test to see if the crowd power can significantly beat that of a single player. </p><span class="anchorText" id="PacRun"></span>
+        <p></p>
+        <p>This is a personal project created in the class 98-294 NodeJS.</p>
+      </section>
+      <hr />
+      <section>
+        <h1>PacRun, Fall 2016</h1><span class="anchorText" id="PacRun"></span>
+        <p class="block-cite">Augmented reality pacman.</p>
+        <div class="media"><div style="position:relative;height:0;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/u1C6QwPaH4g?list=PLDF9wPFE6svV8Ne7RA16nnvqRzsdfjMwr&amp;ecver=2&amp;t=32" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div></div>
+        <p>PacRun is an augmented reality game inspired by a Google April Fool joke. In PacRun, the player needs to run wild in the real-life scenario, eat all the yellow dots before caught by any of the ghosts. </p>
+        <p>At the start of the game, the player taps on the map to place the dots, and then tap again to place the ghosts. After the player hits "ready", they need to run as fast as possible, approach and eat all the yellow dots before they get caught by any of the ghosts, which moves at a random speed, but approaching the player's general direction.</p>
+        <p>Due to the technical limit (cannot scrap road data out of Google Maps), this is not a loyal replication of PacMan: I cannot keep the ghosts stay on the road all the time. Besides, due to the time constraint, I did not implement the blue fruit part. However, I still really enjoy playing this game, as it is intense - I need to estimate and calculate my route. This is the first time I enjoy running this much!</p><span class="anchorText" id="Flappy3D"></span>
+        <p>This is a personal project created in the class 98-225 Intro to Swift.</p>
+      </section>
+      <hr />
+      <section>
+        <h1>Flappy3D, Spring 2016</h1>
+        <p class="block-cite">Play the flappy bird in 3D space and slaught mode. No external library used.</p>
+        <div class="media"><div style="position:relative;height:0;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/A2ZqVVL6QgE?list=PLDF9wPFE6svV8Ne7RA16nnvqRzsdfjMwr&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" gesture="media" allowfullscreen></iframe></div></div>
+        <p>Flappy3D is an adaption of the traditional flappy bird game, except it carries four different game mode: traditional 2D flappy bird, 3D flappy bird, 3D flappy bird that requires two players, and a slaught mode where you have to snap the pipe and kill the bird.</p>
+        <p>This is made during my transition from Architecture major to Mathematics, and thus is a hybrid of both disciplines, and thus is my first year as a programmer. I did not use any external packages, and therefore calculate all the spatial relation by myself.</p>
+        <p>This is a personal project created in the class 15-112 Intro to Programming.</p>
+      </section>
+    </div>
+    <div id="right-column">
+      <ul>
+        <li class="current"><a href="#MindSweeper">MindSweeper</a></li>
+        <li><a href="#PacRun">PacRun</a></li>
+        <li><a href="#Flappy3D">Flappy3D</a></li>
+      </ul>
+    </div>
+  </main>
+
+</body>
+</html>

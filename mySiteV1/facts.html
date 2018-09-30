@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- js -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.0/d3.min.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+  <script type="text/javascript" src="js/facts.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/global.css">
+  <link rel="stylesheet" type="text/css" href="css/facts.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100|Spectral+SC:300" rel="stylesheet">
+
+  <!-- misc -->
+  <meta charset="utf-8" />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>Huayun</title>
+
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+
+    <div class="nav-title center noselect">facts</div>
+    <a href="index.html"><img id="logo" src="assets/logo.svg" /></a>
+    <ul class="nav-title-desktop noselect serif">
+      <li><a href="contact.html">contact</a></li>
+      <li class="selected">facts</a></li>
+      <li><a href="project.html">project</a></li>
+      <li><a href="about.html"  >about</a></li>
+
+    </ul>
+  </nav>
+
+  <main>
+    <div id="on-mobile" >
+      <img class="center single-img" src="assets/desktop.svg" />
+      <p class="center">This site uses interactive components that are not available on mobile devices.</p>
+    </div>
+    <p id="js-alert" class="center">You need to enable your javacript.</p>
+
+    <div id="on-desktop">
+      <h1 class="center">My typical day.</h1>
+      <div class="center" id="chart1" class="charts"></div>
+      <div class="tooltip center"></div>
+    </div>
+  </main>
+
+</body>
+</html>

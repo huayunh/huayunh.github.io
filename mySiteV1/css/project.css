@@ -1,0 +1,89 @@
+main {
+	margin-top: 80px;
+}
+
+section h1, section p{
+	margin: 10px 30px;
+	color: white;
+}
+
+hr {
+	height: 1px;
+	background-color: #555;
+	margin: 30px;
+}
+
+section h1 {
+	color: #80c5f8;
+	font-family: 'Spectral SC', serif;
+	font-weight: inherit;
+	font-size: 120%;
+}
+
+.block-cite {
+	border-left: 4px solid #ac726d;
+	padding: 10px;
+	margin-left: 60px;
+	font-size: 80%;
+}
+
+.media {
+	margin: 15px 0;
+}
+
+#right-column {
+	display: none;
+}
+
+@media(min-width:750px){
+	main {
+		width: 700px;
+		margin: 120px auto 50px auto;
+	}
+	section h1 {
+		font-size: 200%;
+	}
+}
+
+@media(min-width:1100px){
+	main {
+		width: 1050px;
+		margin: 80px auto 50px auto;
+	}
+
+	#left-column{
+		width: 80%;
+		float:left;
+		background-color: #1a1a1a;
+		padding-top: 30px;
+		margin-bottom: 50px;
+		padding-bottom: 20px;
+	}
+	#right-column{
+		width: 20%;
+		right: 0;
+		float: right;
+		display: block;
+	}
+	#right-column ul {
+		list-style: none;
+		padding-top: 20px;
+		color: #80c5f8;
+	}
+
+	#right-column ul li {
+		padding: 10px 20px;
+	}
+
+	#right-column ul li.current {
+		background-color: #1a1a1a;
+	}
+
+	.media {
+		margin: 20px;
+		float: left;
+		width: 500px;
+		height: 282px;
+	}
+}
+

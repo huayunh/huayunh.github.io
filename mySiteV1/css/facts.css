@@ -1,0 +1,53 @@
+main {
+	margin-top: 80px;
+	margin: 80px 30px 80px 30px;
+}
+
+h1 {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	font-size: 200%;
+}
+
+#chart1 {
+	height: 400px;
+	width: 400px;
+	position: relative;
+}
+
+#chart1 path:hover {
+	opacity: 0.8;
+	transition-duration: 0.2s;
+}
+
+#chart1+.tooltip {
+	color: #ccc;
+	margin-top: 20px;
+}
+
+#on-desktop {
+  display: none;
+}
+
+path.hidden {
+	display: none;
+}
+
+@media(min-width:750px){
+	#on-mobile {
+		display: none;
+	}
+
+	#on-desktop {
+	    display: initial;
+	}
+
+	main {
+		margin: 120px auto 80px auto;
+		width: 700px;
+	}
+
+	.single-img {
+		display: none;
+	}
+}
