@@ -1,6 +1,6 @@
 body {
 	font-size: 14pt;
-	--actions-color: #1f4b58; /* cyan */
+	--actions-color: #396471; /* cyan */
 	--theme-color: #9b616e;   /* dark red */
 	--border-color: #00000020;
 	--box-shadow-3dp: 0 3px 6px #00000020;
@@ -25,7 +25,7 @@ nav {
 	background-color: white;
 }
 
-nav * {
+nav img, nav span {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -99,11 +99,13 @@ html::selection {
 .tagContainer span {
 	padding: 0.2em 0.8em;
 	border-radius: 999px;
-	border: 1px solid var(--theme-color);
 	margin-right: 0.7em;
 	font-size: 70%;
 	alignment-baseline: middle;
-	color: var(--theme-color);
+	/*color: var(--theme-color);*/
+	/*border: 1px solid var(--theme-color);*/
+	border: 1px solid #999;
+	color: #999;
 }
 
 @media only screen and (min-width: 1024px) {
