@@ -30,7 +30,8 @@ nav ul li a{
 nav ul li a:hover{
 	color: var(--actions-color);
     border-bottom: solid 3px var(--actions-color);
-    transition-duration: 200ms;
+    transition: 200ms ease-in-out;
+    /*background-color: #39647111;*/
 }
 
 /* end: nav bar */
