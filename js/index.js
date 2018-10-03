@@ -28,4 +28,22 @@ $(function (){
 		}
 		]
 	});
+
+	if ($(this).scrollTop() < 3) {
+		$('nav').removeClass('shadow');
+		$('nav').addClass('no-shadow');
+	} else {
+		$('nav').removeClass('no-shadow');
+		$('nav').addClass('shadow');
+	}
+
+	$(window).scroll(() => {
+		if ($(this).scrollTop() < 3) {
+			$('nav').removeClass('shadow');
+			$('nav').addClass('no-shadow');
+		} else {
+			$('nav').removeClass('no-shadow');
+			$('nav').addClass('shadow');
+		}
+	});
 });
