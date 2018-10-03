@@ -46,4 +46,8 @@ $(function (){
 			$('nav').addClass('shadow');
 		}
 	});
+
+	$('.flipCardContainer').click(function() {
+		window.location.href = $(this).find('a').attr('href');
+	});
 });
