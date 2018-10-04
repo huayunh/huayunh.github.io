@@ -6,6 +6,7 @@ $(function (){
 		infinite: true,
 		mobileFirst: true,
 		arrows: false,
+		lazyLoad: 'ondemand',
 		responsive: [
 		{
 			breakpoint: 320,

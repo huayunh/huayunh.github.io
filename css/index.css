@@ -70,7 +70,7 @@ nav ul li a:hover{
 	overflow: hidden;
 	position: relative;
 	font-family: sans-serif;
-	margin: 12px 6px;
+	margin: 0 6px 12px;
 }
 
 .flipCardContainer:hover {
@@ -98,7 +98,6 @@ nav ul li a:hover{
 .textContainer {
 	margin: 1em;
 	text-align: left;
-	/*border: 1px solid black;*/
 }
 
 main {
@@ -169,6 +168,10 @@ h2 {
 
     .flipCards {
     	text-align: center;
+    }
+
+    .flipCardContainer {
+		margin: 12px 6px;
     }
 
 }
