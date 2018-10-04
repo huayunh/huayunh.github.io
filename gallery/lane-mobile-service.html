@@ -19,7 +19,7 @@
 	<main class="wrapper">
 	  <section class="parallax">
 	    <h1>Construction Site Mobile Service</h1>
-	    <span style="background-image: url('../gallery/asset/Screen Shot 2018-09-29 at 5.12.01 PM.png');"><div class="mask"></div></span>
+	    <span style="background-image: url('../gallery/asset/stakeholder-map.jpg');"><div class="mask"></div></span>
 	  </section>
 	  <section class="static">
 	  	<div class="text-section">
@@ -33,35 +33,75 @@
 			</p>
 			
 			<h3>Task</h3>
-			<p> This is an individual task where the students are expected to rearrange, twist a raw piece of plain text about industrial ecology into a very organic digital report, which explains to our client (Disney, Amazon, FAA of my own choice) about the importance of industrial ecology. We are free to gather resourc- es through the internet, and arrange the pictorial and textual materials neatly on a 960px by 650px canvas.</p>
+			<p>Design a mobile application for Lane Construction, a company involved in various different public construction tasks, mostly during the asphalt-paving process. The mobile application should take advantage of the functions embedded inside a phone, such as its camera, microphone, gyrometer, accelerometer, Bluetooth, and NFC. Aside from that, the mobile application should also use two out of four designated emerging technologies.</p>
+
+			<h3>Background Research</h3>
+			<p>Lane Construction Corporation is a company that mainly handles public projects, such as the construc- tion of airport, bridges, pipes, highways, roads, tunnels, etc. They also rent their equipment to other construc- tion companies while they are not in use.</p>
+
+			<p>During this process, Lane would need to handle many internal and external affairs: Since they are mostly dealing with public projects, not only do they need to communicate with their clients for future investments, they would also need to go through supply chains, regulatory permits and the community which is their actual user.</p>
+
+			<h3>Ideation</h3>
+
+			<p>For the ideation part, we used the reversed assumption and the speedy sketch technique. Specifically, we generated a list of assumptions of their current state, reversed it, selected three with the best design opportunities, and conduct a speedy sketch session.</p>
 
 			<div class="in-text-img">
-				<img src="asset/Screen Shot 2018-09-29 at 10.50.56 PM.png" />
-				<p> I sketched a book map (left) and page layout (right).  I devised a equal-width sixcolumn grid system to achieve the flexibility, because 6 is the least common multiple of 1, 2 and 3. The 5 schemes in the page layout I came up with were serving different purposes: some are relaxing, and some are more serious.</p>
+				<img src="asset/mobile-service-speed-sketch.jpg" />
+				<p>The low-fidelity sketch. For the first re-assumption, we developed a task manager, where workers can assign / checkout their tasks remotely. For the second one, we designed a status tracker for the architect/client/managers’ on-site visits. For the third assumption, we created an App to give workers a kick-start tool and to familiarize them with the equipment.</p>
 			</div>
 
-			<p>I then went through several iterations to change the grid layout, as well as find the best assets that properly fit my target audiences (the engineers and inspectors of FAA). Besides, I also highlighted some keywords that I think would be useful for my inspector audience, so that they can quickly locate the relevant concepts within the document.</p>
+			<h3>First Solution: On-site Simulator</h3>
+			<p>After assumption prototyping, we came up with a tool that would help the site visitors who care about the construction but lack the necessary technical knowl- edge to imagine the details. This was inspired by our re-assumption prototype, but modified slightly so that it facilitates the site visit for both the designers and the clients.</p>
+
+			<p>When pointed at certain structures, this tool would be able to recognize the objects and simulate its usage scenarios given certain conditions (70 years from now, under flood, earthquakes, etc). Then the result will be overlayed onto the camera graphics with augmented reality technologies.</p>
+
+			<p>We proposed this because we thought this one had more potential amongst the three -- The first one al- ready exists, the third one lacks practicability. This one embraced many great virtues: it brought Lane more investments by visually explaining the details. This is a task that only a phone can perform in that it requires the flexibility that a desktop computer doesn’t have. It also distinguished itself from a web application since it required access to many other phone functionalities. Moreover, we believed this phone app would enhance the constructor-client relationship because it explained better to its audiences what is happening behind each placement of steels, bricks, etc., and make the design more trust worthy. If it is an architect who visit their site during the construction as a construction adminis- trator, they might as well use the App to explain to the workers about their design decisions.</p>
+
+			<p>However, during the in-class critique, people wondered over the App’s practicability. Specifically, people thought that all the simulations would have been pre-processed before the construction even started, and that should leave no problems for the clients or the workers. Also, the use case was not well defined: We needed to specify who would be downloading the App and carry it with them on site, where they will be looking at, who will accompany with them during the site visit (if any).</p>
+
+			<p>Based on the feedback, we decided to discard the extreme condition simulation, and focus solely on tracking the progress and give prediction based on the real-time data, which leads to our second solution.</p>
+
+			<h3>Second Solution: Progress Tracker</h3>
+			<p>We switched from an extreme-condition structural simulator to a project progress tracker. They are similar in that they both use AR technologies to reproduce a certain scene that is not happening in front of the users yet. However, the progress tracker focused more on the tasks and its completion rate.</p>
+
+			<div class="in-text-img small-img">
+				<img src="asset/2u98io-k99jdjg.jpg" />
+				<p>When a client is visiting the site, they might care the most about where they are in the entire timeline, and whether they are going to finish the project on time. </p>
+			</div>
+
+			<p>Our proposed app is embedded with an AR camera. Whenever it is pointed at a tag on an object (for example, an unfinished pillar), the computer will identify the object, and use the real time data to report its status, and calculate its expected completion time. Besides, the client might also be specifically interested in updates since their last visit. A dashboard with a feed of updates would help guide the visitors during their tour, suggesting where they shall look at.</p>
+
+			<p>The feedback we received from the instructors was that we still need to specify the use case in detail and, more importantly, how this visit will be valuable and continuously valuable to Lane.</p>
+
+			<h3>Third Solution: Educational Outreach</h3>
+			<p>We decided to do more research on the company after we received the class feedback. Then it became clear to us that Lane is constantly hiring: Lane’s twitter feed is almost always about recruitment. They also have many job openings across the country.</p>
+
+			<p>Another interesting fact we noticed is that many schools and organizations would arrange construction site visits for students who would like to have construc- tion-related job in the future, and Lane hosts those visits, too.</p>
+
+			<p>With these in mind, we decided to merge the two ideas (hiring and educational site visit) together, and create an App that would facilitate Lane’s community outreach program. And this leads us to our third solution -- educational outreach.</p>
+
 			<div class="in-text-img">
-				<img src="asset/Screen Shot 2018-09-29 at 10.55.01 PM.png" />
-				<p>The evolution of the first three pages during iteration 2 - 4. These three grid templates were used during many following pages and were representative for the trends in the entire documents.</p>
+				<img src="asset/mobile-service-screen-map.jpg" />
+				<p>Screen map.</p>
 			</div>
 
-			<h3>Result</h3>
-			<p>Overall, the final presentation was great. I walked through the entire design for the class and explained my design decisions in detail.  The instructor suggested that the glossary, which I designed for the safety inspectors and was intentionally left at the top to avoid the distraction, could be brought closer to the text to merge with the text altogether through varying on colors. </p>
-			<ul>
-			<li><a href="asset/Huang-Huayun-digital-report.pdf">The design outcome</a></li>
-			<li><a href="asset/digital-report-process-book.pdf">Process book</a></li>
-			</ul>
+			<p>Our new tool -- an App that will facilitate the site visit -- also make use of the AR technology. In a typical site visit, there would be a big group of students, and although a guide would be there to tour students around, sometimes students might still get lost in the tour guide’s introduction, or they might simply want to explore the site by themselves. This is where an AR camera would be helpful. Students can look at where they want, as a supplement of the tour guide’s instructions.</p>
+
+			<div class="in-text-img">
+				<img src="asset/mobile-service-screens.png" />
+				<p>1) Auto-location detection. 2) Profile page. 3) Home page. 4) Screens with icons overlay. 5) Information page after the user click into an icon. 6) Gallery collecting all the point of interests.</p>
+			</div>
+
+			<p><a href="asset/A2 Mobile Service Process Book.pdf">Check out the process book</a></p>
 
 		</div>
 
-		<a class="check-out-more-anchor" href="Peer-Emergency-Response.html"><div class="check-out-more-box">
+		<a class="check-out-more-anchor" href="digital-report-documentation-design.html"><div class="check-out-more-box">
 			<p class="check-out-more-label">Check out more</p>
 			<p class="check-out-more-title">
-				Peer Economy in Emergency Response
+				Digital Report Doc Design
 			</p>
 			<p class="check-out-more-description">
-				Using peer economy to solve the problem of emergency response.
+				Typographically rearrange a given chunck of text into an internal report for a given client.
 			</p>
 		</div></a>
 	  </section>
