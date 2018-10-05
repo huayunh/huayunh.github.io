@@ -68,6 +68,8 @@ function mailMe() {
 	textArea.style.outline = 'none';
 	textArea.style.boxShadow = 'none';   
 	textArea.style.background = 'transparent';
+	textArea.contentEditable = true;
+	textArea.readOnly = false;
 	textArea.value = email;
 	textArea.id = 'ta';
 	document.body.appendChild(textArea);
