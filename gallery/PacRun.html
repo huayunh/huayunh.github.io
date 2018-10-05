@@ -19,7 +19,7 @@
 	<main class="wrapper">
 	  <section class="parallax">
 	    <h1>PacRun</h1>
-	    <span style="background-image: url('../gallery/asset/Screen Shot 2018-10-03 at 1.31.17 AM.png');"><div class="mask"></div></span>
+	    <span style="background-image: url('../gallery/asset/pacrun.png');"><div class="mask"></div></span>
 	  </section>
 	  <section class="static">
 	  	<div class="text-section">
@@ -29,11 +29,43 @@
 			</div>
 			<p class="project-time">December 2016</p>
 			<p class="abstract">
-				An augmented reality game that allows you to play PacMan in real life with Google Maps API. Inspired by a Google Map April Fool's Day Easter Egg and a location based game <a href="https://en.wikipedia.org/wiki/Ingress_(video_game)">Ingress</a>.
+				An augmented reality game that allows you to play <a href="https://en.wikipedia.org/wiki/Pac-Man">Pac-Man</a> in real life with Google Maps API. Inspired by a Google Map April Fool's Day Easter Egg and a location based game <a href="https://en.wikipedia.org/wiki/Ingress_(video_game)">Ingress</a>.
 			</p>
 			
 			<h3>Demo Video</h3>
 			<div style="position:relative;height:0;padding-bottom:56.27%"><iframe src="https://www.youtube.com/embed/u1C6QwPaH4g?list=PLDF9wPFE6svV8Ne7RA16nnvqRzsdfjMwr&amp;ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
+			<h3>How to Play</h3>
+			<p>First, <b>set up the game map</b>. I had been trying to figure out a way to automatically generate dots and ghosts on the streets, but it was not part of the google maps API.</p>
+			<ul>
+				<li>Pick a spot outdoor.</li>
+				<li>Start the APP. Allow access to locations.</li>
+				<li>Press the "S" button at the bottom.</li>
+				<li>Tap to add the food (yellow dots) to the map.</li>
+				<li>When finished, press "S".</li>
+				<li>Tap to add the ghosts to the map.</li>
+				<li>When finished, press "S".</li>
+				<li>Confirm the map by pressing "s" again, or "back" to edit.</li>
+			</ul>
+
+			<p>Second, <b>play</b>.</p>
+
+			<ul>
+				<li>Ghosts' location will update every three seconds. It will move North/East/South/West by a fixed distance, and the direction is randomized but have a higher chance at moving towards the player.</li>
+				<li>If you run close enough to a ghost (say, within 15 meters), it will eat you, and game over.</li>
+				<li>If you run close enough to a yellow dot, you can eat the dot.</li>
+				<li>Like the traditional Pac-Man, you win the game by eating all the yellow dots.</li>
+			</ul>
+
+			<div class="in-text-img">
+				<img src="asset/pacrun-screenshots.png" />
+				<p>The ghosts are following me all the way to my apartment.</p>
+			</div>
+
+			<h3>Playing Experience?</h3>
+			<p>I personally find this game extremely interesting and really encouraging me to run. You don't see the ghosts in the real life, however you know they are around you, moving towards you little by little. You would like to take a quick break, but when you look down at your phone, you see the ghosts moving towards you little by little.</p>
+
+			<p>However I wish I could have enough time to implement the "fruits", so that I can run after the ghosts and annihilate them.</p>
 
 		</div>
 

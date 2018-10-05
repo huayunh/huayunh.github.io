@@ -14,6 +14,16 @@ body {
 	background: white;
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: #9b616e99;
+}
+
+::selection {
+    color: black;
+    background: #9b616e99;
+}
+
 nav {
 	position: fixed;
 	top: 0;
