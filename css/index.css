@@ -45,6 +45,8 @@ nav.shadow {
 	height: 130px;
 	overflow: hidden;
 	position: relative;
+	background-position: center;
+	background-size: cover;
 }
 
 .imageContainer img{
@@ -58,6 +60,40 @@ nav.shadow {
 .textContainer {
 	margin: 1em;
 	text-align: left;
+}
+
+.flipCardContainer-wrapper {
+	display: inline-block;
+	position: relative;
+}
+
+.featured-project::after {
+	content:'';
+	background-image: url(../asset/icons/star.svg);
+	position: absolute;
+	top: 110px;
+	right: 12px;
+	background-size: cover;
+	height: 36px;
+	width: 38px;
+	animation: spin 6s infinite linear;
+	-webkit-animation: spin 6s infinite linear;
+}
+
+.featured-project::after:hover {
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
 
 main {
