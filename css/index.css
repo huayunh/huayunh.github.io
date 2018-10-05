@@ -165,7 +165,7 @@ div.list-small div {
 div.list-small div a {
 	display: block;
 	text-align: left;
-	width: 9em;
+	width: 7em;
 	margin: 3px;
 	text-decoration: none;
 	padding: 15px;
@@ -202,11 +202,10 @@ footer {
 	nav ul {
 		display: block;
 	}
-
 }
 
 /* desktop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 912px) {
 	.flipCardContainer {
 		display: inline-block;
 	}

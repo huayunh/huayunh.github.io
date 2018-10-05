@@ -13,18 +13,17 @@ $(function (){
 			settings: {
 				arrows: false,
 				centerMode: true,
-				// centerPadding: '24px',
 				slidesToShow: 1
 			}
 		},
 		{
-			breakpoint: 768,
+			breakpoint: 600,
 			settings: {
 				slidesToShow: 2
 			}
 		},
 		{
-			breakpoint: 1024,
+			breakpoint: 912,
 			settings: "unslick"
 		}
 		]
