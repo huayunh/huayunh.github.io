@@ -76,11 +76,6 @@ nav.shadow {
 	background-size: cover;
 	height: 36px;
 	width: 38px;
-	animation: spin 6s infinite linear;
-	-webkit-animation: spin 6s infinite linear;
-}
-
-.featured-project::after:hover {
 }
 
 @-moz-keyframes spin {
@@ -219,6 +214,11 @@ footer {
 	div.list-small div a:hover {
 		background-color: #f0f0f0;
 		transition-duration: 300ms;
+	}
+
+	.featured-project::after {
+		animation: spin 6s infinite linear;
+		-webkit-animation: spin 6s infinite linear;
 	}
 
 }
