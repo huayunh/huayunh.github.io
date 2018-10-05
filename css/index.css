@@ -13,14 +13,17 @@ nav.shadow {
 nav ul {
 	display: none;
 	list-style-type: none;
-    margin: 0 1em 0 0;
-    padding: 0;
+	margin: 0 1em 0 0;
+	padding: 0;
 }
 
 nav ul li {
 	float: right;
 	height: 60px;
-    border-bottom: solid 3px #FFFFFF00;
+	border-bottom: solid 3px #FFFFFF00;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
 nav ul li a{
@@ -36,18 +39,15 @@ nav ul li a{
 }
 
 nav ul li:hover {
-    border-bottom: solid 3px var(--actions-color);
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    transition: 300ms ease-in-out;
-    cursor: pointer;
+	border-bottom: solid 3px var(--actions-color);
+	transition: 300ms ease-in-out;
+	cursor: pointer;
 }
 
 nav ul li a:hover{
 	color: var(--actions-color);
-    /*border-bottom: solid 3px var(--actions-color);*/
-    transition: 300ms ease-in-out;
+	/*border-bottom: solid 3px var(--actions-color);*/
+	transition: 300ms ease-in-out;
 }
 
 /* end: nav bar */
@@ -150,28 +150,73 @@ h2 {
 
 /* end: flip cards */
 
+/* about section */
+div.list-small {
+	list-style-type: none;
+	margin-bottom: 30px;
+	padding: 0;
+	text-align: center;
+}
+
+div.list-small div {
+	display: inline-block;
+}
+
+div.list-small div a {
+	display: block;
+	text-align: left;
+	width: 9em;
+	margin: 3px;
+	text-decoration: none;
+	padding: 15px;
+	font-size: 24px;
+	height: 48px;
+}
+
+div.list-small div a span {
+	display: block;
+	vertical-align: middle;
+	margin-left: 60px;
+	line-height: 48px;
+}
+
+div.list-small div a img {
+	height: 48px;
+	float: left;
+}
+
+/* start: footer */
+footer {
+	padding: 2em;
+	text-align: center;
+	background: #333;
+	color: white;
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 160%;
+	font-size: 80%;
+}
+
 /* tablet */
-
-
 @media only screen and (min-width: 768px) {
-    nav ul {
-    	display: block;
-    }
+	nav ul {
+		display: block;
+	}
 
 }
 
 /* desktop */
 @media only screen and (min-width: 1024px) {
-    .flipCardContainer {
-    	display: inline-block;
-    }
+	.flipCardContainer {
+		display: inline-block;
+	}
 
-    .flipCards {
-    	text-align: center;
-    }
+	.flipCards {
+		text-align: center;
+	}
 
-    .flipCardContainer {
+	.flipCardContainer {
 		margin: 12px 6px;
-    }
+	}
 
 }

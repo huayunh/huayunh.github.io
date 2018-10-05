@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Artboard-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-10" transform="translate(12.000000, 10.000000)" fill="#000000">
+            <path d="M21.9881106,0 L2.01188717,0 C0.900745768,0 0,0.765986656 0,1.71089199 L0,27.2891066 C0,28.2340119 0.900745768,29 2.01188717,29 L21.9881106,29 C23.099252,29 23.9999977,28.2340119 23.9999977,27.2891066 L23.9999977,1.71089199 C24.001643,0.765986656 23.1008931,0 21.9881106,0 Z M22.1031717,26.0312367 C22.1031717,26.6378784 21.5245838,27.1299047 20.8112163,27.1299047 L3.19058239,27.1285092 C2.47721497,27.1285092 1.89862699,26.6364828 1.89862699,26.0298411 L1.89862699,2.97044014 C1.89862699,2.36379846 2.47721497,1.87177209 3.19058239,1.87177209 L20.8128995,1.87177209 C21.5262669,1.87177209 22.1048549,2.36379846 22.1048549,2.97044014 L22.1031717,26.0312367 Z" id="Fill-1"></path>
+            <polygon id="Fill-2" points="4 6 20 6 20 4 4 4"></polygon>
+            <polygon id="Fill-3" points="4 10 20 10 20 8 4 8"></polygon>
+            <polygon id="Fill-4" points="4 14 20 14 20 12 4 12"></polygon>
+            <polygon id="Fill-5" points="13 18 23 18 23 16 13 16"></polygon>
+            <polygon id="Fill-6" points="13 26 23 26 23 24 13 24"></polygon>
+            <polygon id="Fill-7" points="13 22 23 22 23 20 13 20"></polygon>
+            <path d="M9,17.5 C9,19.5 6,19.5 6,17.5 C6,15.5 9,15.5 9,17.5" id="Fill-8"></path>
+            <path d="M4,23 C4,21.3428489 5.56665701,20 7.5,20 C9.43334299,20 11,21.3428489 11,23" id="Fill-9"></path>
+        </g>
+    </g>
+</svg>
