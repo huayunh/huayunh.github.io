@@ -54,7 +54,9 @@ $(function (){
 
 // https://stackoverflow.com/a/39295206
 function mailMe() {
-	var email = "h" + window.location.hostname.slice(0,6) + "0828@gmail.com";
+	var firstHalf = "h" + window.location.hostname.slice(0,6) + "0828";
+	var secondHalf = "@gmail.com";
+	var email = firstHalf + secondHalf;
 	var textArea = document.createElement("textarea");
 	textArea.style.position = 'fixed';
 	textArea.style.top = 0;
@@ -80,7 +82,7 @@ function mailMe() {
 	}
 	document.body.removeChild(textArea);
 	var tooltip = document.getElementById("myTooltip");
-	tooltip.innerHTML = "Copied: " + email;
+	tooltip.innerHTML = "Copied: <br />" + firstHalf + "<br />" + secondHalf;
 }
 
 function outFunc() {
