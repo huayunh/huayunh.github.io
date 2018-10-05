@@ -51,3 +51,39 @@ $(function (){
 		window.location.href = $(this).find('a').attr('href');
 	});
 });
+
+// https://stackoverflow.com/a/39295206
+function mailMe() {
+	var email = "h" + window.location.hostname.slice(0,6) + "0828@gmail.com";
+	var textArea = document.createElement("textarea");
+	textArea.style.position = 'fixed';
+	textArea.style.top = 0;
+	textArea.style.left = 0;  
+	textArea.style.width = '2em';
+	textArea.style.height = '2em'; 
+	textArea.style.padding = 0;  
+	textArea.style.border = 'none';
+	textArea.style.outline = 'none';
+	textArea.style.boxShadow = 'none';   
+	textArea.style.background = 'transparent';
+	textArea.value = email;
+	textArea.id = 'ta';
+	document.body.appendChild(textArea);
+	//textArea.select();
+	var range = document.createRange();
+	range.selectNode(textArea);
+	textArea.select();
+	try {
+		var successful = document.execCommand('copy');
+	} catch (err) {
+		 alert('Oops, unable to copy');
+	}
+	document.body.removeChild(textArea);
+	var tooltip = document.getElementById("myTooltip");
+	tooltip.innerHTML = "Copied: " + email;
+}
+
+function outFunc() {
+	var tooltip = document.getElementById("myTooltip");
+	tooltip.innerHTML = "Copy to clipboard";
+}
