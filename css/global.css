@@ -43,14 +43,14 @@ nav img, nav span {
 
 nav img {
 	height: 36px;
-	left: 12px;
+	left: 24px;
 }
 
 nav span {
 	font-family: sans-serif;
 	font-variant: small-caps;
 	font-weight: 500;
-	left: 72px;
+	left: 84px;
 	font-size: 140%;
 	color: #555;
 }
