@@ -67,7 +67,7 @@ nav.shadow {
 	position: relative;
 }
 
-.featured-project::after {
+.featured-project::after, .spinning-star {
 	content:'';
 	background-image: url(../asset/icons/star.svg);
 	position: absolute;
@@ -76,6 +76,14 @@ nav.shadow {
 	background-size: cover;
 	height: 36px;
 	width: 38px;
+}
+
+.spinning-star {
+	height: 18px;
+	width: 19px;
+	position: initial;
+	content: none;
+	display: inline-block;
 }
 
 @-moz-keyframes spin {
@@ -216,7 +224,7 @@ footer {
 		transition-duration: 300ms;
 	}
 
-	.featured-project::after {
+	.featured-project::after, .spinning-star {
 		animation: spin 6s infinite linear;
 		-webkit-animation: spin 6s infinite linear;
 	}
