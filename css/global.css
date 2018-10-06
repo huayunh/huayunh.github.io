@@ -158,14 +158,19 @@ html::selection {
 	color: #999;
 }
 
+.no-mobile {
+	display: none;
+}
+
 /* tablet */
 @media only screen and (min-width: 768px) {
-	nav ul {
-		display: block;
-	}
 
 	.mobile {
 		display: none;
+	}
+
+	.no-mobile {
+		display: initial;
 	}
 }
 
