@@ -209,14 +209,15 @@ footer {
 @media only screen and (min-width: 912px) {
 	.flipCardContainer {
 		display: inline-block;
+		margin: 12px 6px;
+	}
+
+	.flipCardContainer p {
+		line-height: 130%;
 	}
 
 	.flipCards {
 		text-align: center;
-	}
-
-	.flipCardContainer {
-		margin: 12px 6px;
 	}
 
 	div.list-small div a:hover {
