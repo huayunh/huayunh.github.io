@@ -148,6 +148,14 @@ section:first-child h1 {
   color: #777;
 }
 
+nav {
+  display: none; /* because I need to decide on where the back button will be taking people to */
+}
+
+main {
+  padding-top: 0;
+}
+
 /* desktop */
 @media only screen and (min-width: 1024px) {
   /* on desktop, enable the parallax effect */
