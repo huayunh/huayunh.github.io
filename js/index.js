@@ -53,4 +53,10 @@ $(function (){
 
 	var email = "h" + window.location.hostname.slice(0,6) + "0828@gmail.com";
 	$('#email-button').attr('href', "mai" + "lto:" + email);
+
+	$('.collapsible-js').addClass('collapsible').removeClass('collapsible-js');
+
+	$('.collapsible section h2').click(function(){
+		$(this).parent().parent().toggleClass('expanded');
+	});
 });

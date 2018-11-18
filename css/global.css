@@ -35,7 +35,7 @@ nav {
 	background-color: white;
 }
 
-nav img, nav span {
+nav img, nav .index-page-text{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -46,13 +46,14 @@ nav img {
 	left: 24px;
 }
 
-nav span {
+nav .index-page-text {
 	font-family: sans-serif;
 	font-variant: small-caps;
 	font-weight: 500;
 	left: 84px;
 	font-size: 140%;
 	color: #555;
+	text-decoration: none;
 }
 
 nav ul {
@@ -170,7 +171,7 @@ html::selection {
 	}
 
 	.no-mobile {
-		display: block;
+		display: unset;
 	}
 }
 

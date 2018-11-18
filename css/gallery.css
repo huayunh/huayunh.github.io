@@ -135,25 +135,15 @@ section:first-child h1 {
 }
 
 .featured-project {
-  position: absolute;
+  /*position: absolute;
   top: 12px;
   right: 2vw;
-  /*padding: 5px 10px;*/
   text-transform: uppercase;
   font-family: sans-serif;
   font-size: 80%;
-  /*color: var(--theme-color);*/
-  /*border: 1px solid var(--theme-color);*/
   letter-spacing: 0.08em;
-  color: #777;
-}
-
-nav {
-  display: none; /* because I need to decide on where the back button will be taking people to */
-}
-
-main {
-  padding-top: 0;
+  color: #777;*/
+  display: none;
 }
 
 /* desktop */

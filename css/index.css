@@ -32,6 +32,7 @@ nav.shadow {
 	box-sizing: border-box;
 	font-family: sans-serif;
 	margin: 0 6px 12px;
+	display: inline-block;
 }
 
 .flipCardContainer:hover {
@@ -87,7 +88,7 @@ nav.shadow {
 	display: inline-block;
 	position: relative;
 }
-
+/*
 .featured-project::after, .spinning-star {
 	content:'';
 	background-image: url(../asset/icons/star.svg);
@@ -97,7 +98,7 @@ nav.shadow {
 	background-size: cover;
 	height: 36px;
 	width: 38px;
-}
+}*/
 
 .spinning-star {
 	height: 18px;
@@ -122,6 +123,7 @@ nav.shadow {
 
 main {
 	padding-top: 120px;
+	padding-bottom: 30px;
 }
 
 h2 {
@@ -234,12 +236,13 @@ footer {
 h2.subtitle {
 	font-family: sans-serif;
 	font-size: 130%;
-	margin: 2em 0;
+	padding: 1em 0;
 	font-weight: 300;
+	text-align: center;
 }
 
 /* desktop */
-@media only screen and (min-width: 912px) {
+@media only screen and (min-width: 916px) {
 	.flipCardContainer {
 		display: inline-block;
 		margin: 12px 6px;
@@ -251,7 +254,7 @@ h2.subtitle {
 
 	.flipCards {
 		/*text-align: center;*/
-		max-width: 912px;
+		max-width: 916px;
 		margin: 0 auto;
 	}
 
@@ -260,9 +263,52 @@ h2.subtitle {
 		transition-duration: 300ms;
 	}
 
-	.featured-project::after, .spinning-star {
+	.collapsible {
+		border-bottom: 1px var(--border-color) solid;
+		max-width: 916px;
+		margin: 0 auto;
+	}
+
+	.collapsible:last-child {
+		border-bottom: none;
+	}
+
+	.collapsible>section>h2 {
+		cursor: pointer;
+		margin: 0;
+		position: relative;
+	}
+
+	.collapsible>section>h2:hover {
+		background-color: #fafafa;
+		transition: ease-in-out 0.4s;
+	}
+
+	.collapsible>section>h2:hover::after {
+		content: '+';
+		position: absolute;
+		right: 30px;
+		color: #aaa;
+		font-weight: bold;
+	}
+
+	.collapsible .flipCards{
+		background-color: white;
+		display: none;
+	}
+
+	.collapsible.expanded>section>h2:hover::after {
+		content: '-';
+	}
+
+	.collapsible.expanded .flipCards {
+		display: block;
+		transition: 0.2s ease-in-out;
+	}
+
+/*	.featured-project::after, .spinning-star {
 		animation: spin 6s infinite linear;
 		-webkit-animation: spin 6s infinite linear;
-	}
+	}*/
 
 }
