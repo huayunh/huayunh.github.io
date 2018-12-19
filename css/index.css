@@ -288,7 +288,7 @@ h2.subtitle {
 	}
 
 	.collapsible>section>h2:hover {
-		background-color: #fafafa;
+		background-color: #eee;
 		transition: ease-in-out 0.4s;
 	}
 
