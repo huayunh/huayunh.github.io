@@ -146,6 +146,26 @@ section:first-child h1 {
   display: none;
 }
 
+.nutshell div {
+  padding: 15px 20px;
+  margin: 10px auto;
+  background-color: #f0f0f0;
+  font-size: 85%;
+  max-width: 700px;
+}
+
+.nutshell div h4 {
+  font-size: 120%;
+  font-family: sans-serif;
+  color: var(--actions-color);
+  margin: 0.3em 0;
+}
+
+.nutshell div p, .nutshell div ul {
+  margin: 0;
+  line-height: 150%;
+}
+
 /* desktop */
 @media only screen and (min-width: 1024px) {
   /* on desktop, enable the parallax effect */
@@ -155,7 +175,6 @@ section:first-child h1 {
     overflow-x: hidden;
     overflow-y: auto;
   }
-
 
   section:first-child {
     height: 70vh;

@@ -58,5 +58,6 @@ $(function (){
 
 	$('.collapsible section h2').click(function(){
 		$(this).parent().parent().toggleClass('expanded');
+		$('#gallery-text').addClass('displayed');
 	});
 });

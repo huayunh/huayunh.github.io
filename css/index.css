@@ -241,6 +241,10 @@ h2.subtitle {
 	text-align: center;
 }
 
+#gallery-text {
+	text-align: center;
+}
+
 /* desktop */
 @media only screen and (min-width: 916px) {
 	.flipCardContainer {
@@ -273,6 +277,10 @@ h2.subtitle {
 		border-bottom: none;
 	}
 
+	.collapsible>section {
+		position: relative;
+	}
+
 	.collapsible>section>h2 {
 		cursor: pointer;
 		margin: 0;
@@ -284,21 +292,39 @@ h2.subtitle {
 		transition: ease-in-out 0.4s;
 	}
 
-	.collapsible>section>h2:hover::after {
-		content: '+';
+	.collapsible .chevron {
 		position: absolute;
+		display: inline-block;
 		right: 30px;
-		color: #aaa;
-		font-weight: bold;
+		top: 0;
+		background-image: url('../asset/icons/baseline-expand_more-24px.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 100%;
+		width: 24px;
+		transition: transform 0.4s ease-in-out;
+	}
+
+	.collapsible.expanded .chevron {
+		transform: rotate(-180deg);
+	}
+
+	#gallery-text {
+		color: transparent;
+		visibility: hidden;
+		font-size: 90%;
+	}
+
+	#gallery-text.displayed {
+		visibility: visible;
+		color: initial;
+		transition: 0.3s ease-in-out;
 	}
 
 	.collapsible .flipCards{
 		background-color: white;
 		display: none;
-	}
-
-	.collapsible.expanded>section>h2:hover::after {
-		content: '-';
 	}
 
 	.collapsible.expanded .flipCards {
