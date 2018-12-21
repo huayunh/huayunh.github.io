@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="194px" viewBox="0 0 384 194" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="45" y="36" width="149" height="46"></rect>
+            <text id="What-is-that-bus-wit" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="54" y="55">What is that bus with </tspan>
+                <tspan x="54" y="72">CMU logo for? </tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="108" y="93" width="121" height="28"></rect>
+            <text id="Where-is-it-going?" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="117" y="110">Where is it going?</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="203" y="43" width="149" height="46"></rect>
+            <text id="Am-I-eligible-to-rid" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="212" y="62">Am I eligible to ride? </tspan>
+                <tspan x="212" y="79">Can I get on? </tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="34" y="127" width="149" height="28"></rect>
+            <text id="Where-does-it-stop?" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="43" y="146">Where does it stop?</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="235" y="98" width="149" height="46"></rect>
+            <text id="Can-I-commute-with-t" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="244" y="117">Can I commute with </tspan>
+                <tspan x="244" y="134">the bus?</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="129" y="0" width="125" height="31"></rect>
+            <text id="How-can-I-get-on?" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="138" y="19">How can I get on?</tspan>
+            </text>
+            <rect id="Rectangle" fill="#D8D8D8" fill-rule="nonzero" x="187" y="148" width="98" height="46"></rect>
+            <text id="Is-there-a-bus-sched" font-family="OpenSans-Bold, Open Sans" font-size="12" font-weight="bold" fill="#4A4A4A">
+                <tspan x="196" y="167">Is there a bus </tspan>
+                <tspan x="196" y="184">schedule? </tspan>
+            </text>
+            <text id="What-is-a-shuttle?-A" font-family="OpenSans-Bold, Open Sans" font-size="9" font-weight="bold" fill="#4A4A4A">
+                <tspan x="77" y="172">What is a shuttle?</tspan>
+                <tspan x="77" y="185">And what is an escort?</tspan>
+            </text>
+            <text id="Who-is-taking-the-sh" font-family="OpenSans-Bold, Open Sans" font-size="9" font-weight="bold" fill="#4A4A4A">
+                <tspan x="40" y="14">Who is taking the </tspan>
+                <tspan x="40" y="27">shuttle service?</tspan>
+            </text>
+            <text id="Why-should-I-take-CM" font-family="OpenSans-Bold, Open Sans" font-size="9" font-weight="bold" fill="#4A4A4A">
+                <tspan x="0" y="95">Why should I take </tspan>
+                <tspan x="0" y="108">CMU’s shuttle when I </tspan>
+                <tspan x="0" y="121">can take the city bus?</tspan>
+            </text>
+            <text id="Who-is-operating-all" font-family="OpenSans-Bold, Open Sans" font-size="9" font-weight="bold" fill="#4A4A4A">
+                <tspan x="294" y="158">Who is </tspan>
+                <tspan x="294" y="171">operating all </tspan>
+                <tspan x="294" y="184">these?</tspan>
+            </text>
+            <text id="Is-it-safe?" font-family="OpenSans-Bold, Open Sans" font-size="9" font-weight="bold" fill="#4A4A4A">
+                <tspan x="262" y="30">Is it safe?</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
