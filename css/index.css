@@ -264,7 +264,7 @@ h2.subtitle {
 
 	div.list-small div a:hover {
 		background-color: #f0f0f0;
-		transition-duration: 300ms;
+		transition-duration: 200ms;
 	}
 
 	.collapsible {
@@ -304,6 +304,7 @@ h2.subtitle {
 		height: 100%;
 		width: 24px;
 		transition: transform 0.4s ease-in-out;
+		cursor: pointer;
 	}
 
 	.collapsible.expanded .chevron {

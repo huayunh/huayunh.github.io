@@ -56,7 +56,7 @@ $(function (){
 
 	$('.collapsible-js').addClass('collapsible').removeClass('collapsible-js');
 
-	$('.collapsible section h2').click(function(){
+	$('.collapsible section h2, .collapsible section .chevron').click(function(){
 		$(this).parent().parent().toggleClass('expanded');
 		$('#gallery-text').addClass('displayed');
 	});
