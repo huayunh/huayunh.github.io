@@ -233,6 +233,8 @@ footer {
 	font-size: 80%;
 }
 
+/* misc */
+
 h2.subtitle {
 	font-family: sans-serif;
 	font-size: 130%;
@@ -243,6 +245,13 @@ h2.subtitle {
 
 #gallery-text {
 	text-align: center;
+}
+
+#head-avatar {
+	width: 500px;
+	max-width: 70vw;
+	margin: 0 auto;
+	display: block;
 }
 
 /* desktop */
