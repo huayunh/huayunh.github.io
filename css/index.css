@@ -228,7 +228,7 @@ div.list-small div a img {
 
 /* start: footer */
 footer {
-	padding: 2em;
+	padding: 2em 0;
 	text-align: center;
 	background: #333;
 	color: white;
