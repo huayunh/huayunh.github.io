@@ -1,3 +1,8 @@
+body {
+	min-height: 100vh;
+	position: relative;
+}
+
 /* begin: nav bar */
 
 nav.no-shadow {
@@ -123,7 +128,7 @@ nav.shadow {
 
 main {
 	padding-top: 120px;
-	padding-bottom: 30px;
+	padding-bottom: 150px;
 }
 
 h2 {
@@ -231,6 +236,9 @@ footer {
 	font-weight: 300;
 	line-height: 160%;
 	font-size: 80%;
+	position: absolute;
+	bottom:0;
+	width: 100%;
 }
 
 /* misc */
