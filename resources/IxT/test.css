@@ -1,0 +1,14 @@
+#myCanvas {
+	border: 1px solid #ccc;
+}
+
+#myCanvas:hover {
+	cursor: crosshair;
+	border-color: #aaa;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
