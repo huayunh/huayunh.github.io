@@ -101,7 +101,7 @@ var tracingLines = [
 
 	distance : function (x,y) {
 		if (y >= x + 200) {
-			return Math.sqrt((x - 200)**2 + (y - 400)** 2);
+			return distanceBetweenPoints([x,y], [200, 400]);
 		}
 		if (y <= x - 200) {
 			return Math.sqrt((x - 400)**2 + (y - 200)** 2);
@@ -140,30 +140,67 @@ var tracingLines = [
 		ctx.stroke();
 	}
 },
+{
+	// y = |x - 300| + 100, x in [200, 400]
+
+	start: [200, 200],
+	end: [400, 200],
+
+	distance : function (x,y) {
+		// close to the v line
+		if (y <= x && x + y <= 600) {
+			var distance1 = Math.abs(x + y - 400) / sqrt2; // distance to the left line seg
+			var distance2 = Math.abs(y - x + 200) / sqrt2; // distance to the right line seg
+			return Math.min(distance1, distance2);
+		} else if (y >= x && x <= 300) {
+			return distanceBetweenPoints([x,y], this.start);
+		} else {
+			return distanceBetweenPoints([x,y], this.end);
+		}
+	},
+
+	draw: function (ctx) {
+		ctx.beginPath();
+		ctx.moveTo(this.start[0], this.start[1]);
+		ctx.lineTo(300, 100);
+		ctx.lineTo(this.end[0], this.end[1]);
+		ctx.stroke();
+	}
+},
 ]
 
-var currentTracingLine = tracingLines.length - 1;
-// var currentTracingLine = 3;
+// var currentTracingLine = tracingLines.length - 1;
+var currentTracingLine = 0;
 
 $(function (){
 
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 
-var userLine = [] // to store X, Y components
-var userDistance = []
+var userLine; // to store X, Y components
+var userDistance; // to store distance between user line and computed tracing line
+var startTime;
+var endTime;
 
 var $c = $("#myCanvas");
+
+$c.mousedown((e) => {
+	var rect = c.getBoundingClientRect();
+	logCoordinate(e.clientX - rect.left, e.clientY - rect.top);
+	startTime = e.timeStamp;
+});
+
 $c.mousemove((e) => {
 	var rect = c.getBoundingClientRect();
 	if (e.buttons >= 1){
 		logCoordinate(e.clientX - rect.left, e.clientY - rect.top);
-		console.log(e);
+		// console.log(e);
 	}
 	updateCanvas();
 });
 
 $c.mouseup((e) => {
+	endTime = e.timeStamp;
 	clearLog();
 	currentTracingLine = (currentTracingLine + 1) % tracingLines.length;
 	updateCanvas();
@@ -171,6 +208,11 @@ $c.mouseup((e) => {
 
 function updateCanvas(){
 	ctx.clearRect(0, 0, c.width, c.height);
+	ctx.font = "90px Arial";
+	ctx.fillStyle = "#ccc";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle"; 
+	ctx.fillText(currentTracingLine + 1, c.width/2, c.height/2);
 
 	ctx.strokeStyle = "green";
 	tracingLines[currentTracingLine].draw(ctx);
@@ -180,10 +222,10 @@ function updateCanvas(){
 	ctx.arc(tracingLines[currentTracingLine].start[0], tracingLines[currentTracingLine].start[1], 3, 0, 2 * Math.PI);
 	ctx.fill();
 
-	ctx.fillStyle = "red";
-	ctx.beginPath();
-	ctx.arc(tracingLines[currentTracingLine].end[0], tracingLines[currentTracingLine].end[1], 3, 0, 2 * Math.PI);
-	ctx.fill();
+	// ctx.fillStyle = "red";
+	// ctx.beginPath();
+	// ctx.arc(tracingLines[currentTracingLine].end[0], tracingLines[currentTracingLine].end[1], 3, 0, 2 * Math.PI);
+	// ctx.fill();
 
 	// draw the user lines
 	if (userLine.length > 1){
@@ -209,14 +251,25 @@ function logCoordinate(x,y){
 }
 
 function clearLog() {
-	if (userDistance.length > 0) {
+	if (userDistance && userDistance.length > 1) {
+		var firstUserPointToTracingLineDistance = distanceBetweenPoints(userLine[0], tracingLines[currentTracingLine].start);
+		var lastUserPointToTracingLineDistance = distanceBetweenPoints(userLine[userLine.length - 1], tracingLines[currentTracingLine].end);
+		userDistance[0] = firstUserPointToTracingLineDistance;
+		userDistance.push(lastUserPointToTracingLineDistance);
+		console.log("time", (endTime - startTime)/1000);
 		console.log("avg", userDistance.reduce((a, b) => a + b, 0)/userDistance.length);
 		console.log("score", userDistance.reduce((a, b) => a + b**2, 0)/userDistance.length);
 	}
-	userLine = []
-	userDistance = []
+	startTime, endTime = -1, -1;
+	userLine = [];
+	userDistance = [-1];
 }
 
+clearLog();
 updateCanvas();
 
 });
+
+function distanceBetweenPoints(p1, p2) {
+	return Math.sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2);
+}
