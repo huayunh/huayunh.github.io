@@ -12,3 +12,8 @@ body {
 	padding: 0;
 	border: 0;
 }
+
+div {
+	width: 600px;
+	margin: 0 auto;
+}
