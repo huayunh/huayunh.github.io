@@ -1,0 +1,20 @@
+[
+	// for each line drawn by the user
+	{
+		"timeStart": 123,
+		"timeFinished": 123,
+		"task": "tracing",
+		"averageDistance": 123,
+		"run": 0,
+		"line": 2,
+		"score": 2,
+		"seq": [
+			{
+				"x": 123,
+				"y": 123,
+				"time": 123,
+				"distance": 2.3
+			}
+		]
+	}
+]

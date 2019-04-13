@@ -1,170 +1,145 @@
-var sqrt2 = Math.sqrt(2);
+// constants
+const sqrt2 = Math.sqrt(2);
+const s300 = 300 - 75 * sqrt2;
+const l300 = 300 + 75 * sqrt2;
 
-var tracingLines = [
+var sessionLog = [];
+
+
+// 0 = tracingLine task
+// 1 = connectingDots task
+var connectingDots = 0; 
+var currentRun = 0;
+const totalRuns = 2;
+const taskNames = ["tracing", "connecting"];
+
+const tracingLines = [
 {
-	// y = x, x in [200, 400]
+	// y = x, x in [300 - 75 * sqrt2, 300 + 75 * sqrt2]
 
-	start: [200, 200],
-	end: [400, 400],
+	start: [s300, s300],
+	end: [l300, l300],
 
 	// function that returns the distance to it given (x,y)
 	distance : function (x,y) {
-		if (x + y <= 400){
-			return Math.sqrt((x - 200)**2 + (y - 200)** 2);
-		} else if (x + y >= 800){
-			return Math.sqrt((x - 400)**2 + (y - 400)** 2);
+		if (x + y <= s300 * 2){
+			return distanceBetweenPoints([x,y], [s300, s300]);
+		} else if (x + y >= l300 * 2){
+			return distanceBetweenPoints([x,y], [l300, l300]);
 		}
 		return Math.abs(x - y) / sqrt2;
-	},
+	}
+}, 
+{
+	// y = 300, x in [150, 450]
 
-	// function that draw lines given ctx
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
+	start: [150, 300],
+	end: [450, 300],
+
+	distance : function (x,y) {
+		if (x <= 150) {
+			return distanceBetweenPoints([x,y], [150, 300]);
+		}
+		if (x >= 450) {
+			return distanceBetweenPoints([x,y], [450, 300]);
+		}
+		return Math.abs(y - 300);
 	}
 },
 {
-	// y = x, x in [100, 500]
+	// y = -x + 600, x in [s300, l300]
 
-	start: [100, 100],
-	end: [500, 500],
-
-	distance : function (x,y) {
-		if (x + y <= 200){
-			return Math.sqrt((x - 100)**2 + (y - 100)** 2);
-		} else if (x + y >= 1000){
-			return Math.sqrt((x - 500)**2 + (y - 500)** 2);
-		}
-		return Math.abs(x - y) / sqrt2;
-	},
-
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
-	}
-},
-{
-	// y = 2x-400, x in [300, 400]
-
-	start: [300, 200],
-	end: [400, 400],
+	start: [s300, l300],
+	end: [l300, s300],
 
 	distance : function (x,y) {
-		if (y <= -0.5*x - 400 + 2 * 300 + 0.5*300) {
-			return Math.sqrt((x - 300)**2 + (y - 200)** 2);
+		if (y - x >= l300 - s300) {
+			return distanceBetweenPoints([x,y], [s300, l300]);
 		}
-		if (y >= -0.5*x - 400 + 2 * 400 + 0.5*400) {
-			return Math.sqrt((x - 400)**2 + (y - 400)** 2);
-		}
-		return Math.sqrt((2*x - 400 - y)**2 / 5);
-	},
-
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
-	}
-},
-{
-	// y = -40x + 12300, x in [295, 305]
-
-	start: [295, 500],
-	end: [305, 100],
-
-	distance : function (x,y) {
-		if (y >= -1.0/(-40) * x + (-40) * 295 + 12300 + 1.0 / (-40) * 295){
-			return Math.sqrt((x - 295)**2 + (y - 500)** 2);
-		}
-		if (y <= -1.0/(-40) * x + (-40) * 305 + 12300 + 1.0 / (-40) * 305) {
-			return Math.sqrt((x - 305)**2 + (y - 100)** 2);
-		}
-		return Math.abs(-40 * x + 12300 - y) / Math.sqrt(1600+1);
-	},
-
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
-	}
-},
-{
-	// y = -x + 600, x in [200, 400]
-
-	start: [200, 400],
-	end: [400, 200],
-
-	distance : function (x,y) {
-		if (y >= x + 200) {
-			return distanceBetweenPoints([x,y], [200, 400]);
-		}
-		if (y <= x - 200) {
-			return Math.sqrt((x - 400)**2 + (y - 200)** 2);
+		if (y - x <= s300 - l300) {
+			return distanceBetweenPoints([x,y], [l300, s300]); 
 		}
 		return Math.abs(-x + 600 - y) / sqrt2;
-	},
-
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
 	}
 },
 {
-	// y = -5x + 1800, x in [250, 350]
+	// x = 300, y in [450, 150]
 
-	start: [250, 550],
-	end: [350, 50],
+	start: [300, 450],
+	end: [300, 150],
 
 	distance : function (x,y) {
-		if (y >= - 1.0 / (-5)*x + -5 * 250 + 1800 + 1.0 / (-5) * 250) {
-			return Math.sqrt((x - 250)**2 + (y - 550)** 2);
+		if (y <= 150) {
+			return distanceBetweenPoints([x,y], [300, 150]);
 		}
-		if (y <= - 1.0 / (-5)*x + -5 * 350 + 1800 + 1.0 / (-5) * 350) {
-			return Math.sqrt((x - 350)**2 + (y - 50)** 2);
+		if (y >= 450) {
+			return distanceBetweenPoints([x,y], [300, 450]);
 		}
-		console.log("mi")
-		return Math.abs(-5*x + 1800 - y) / Math.sqrt(26);
-	},
-
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
+		return Math.abs(x - 300);
 	}
 },
 {
-	// y = |x - 300| + 100, x in [200, 400]
+	// y = x, x in [300 - 75 * sqrt2, 300 + 75 * sqrt2]
 
-	start: [200, 200],
-	end: [400, 200],
+	end: [s300, s300],
+	start: [l300, l300],
+
+	// function that returns the distance to it given (x,y)
+	distance : function (x,y) {
+		if (x + y <= s300 * 2){
+			return distanceBetweenPoints([x,y], [s300, s300]);
+		} else if (x + y >= l300 * 2){
+			return distanceBetweenPoints([x,y], [l300, l300]);
+		}
+		return Math.abs(x - y) / sqrt2;
+	}
+}, 
+{
+	// y = 300, x in [150, 450]
+
+	end: [150, 300],
+	start: [450, 300],
 
 	distance : function (x,y) {
-		// close to the v line
-		if (y <= x && x + y <= 600) {
-			var distance1 = Math.abs(x + y - 400) / sqrt2; // distance to the left line seg
-			var distance2 = Math.abs(y - x + 200) / sqrt2; // distance to the right line seg
-			return Math.min(distance1, distance2);
-		} else if (y >= x && x <= 300) {
-			return distanceBetweenPoints([x,y], this.start);
-		} else {
-			return distanceBetweenPoints([x,y], this.end);
+		if (x <= 150) {
+			return distanceBetweenPoints([x,y], [150, 300]);
 		}
-	},
+		if (x >= 450) {
+			return distanceBetweenPoints([x,y], [450, 300]);
+		}
+		return Math.abs(y - 300);
+	}
+},
+{
+	// y = -x + 600, x in [s300, l300]
 
-	draw: function (ctx) {
-		ctx.beginPath();
-		ctx.moveTo(this.start[0], this.start[1]);
-		ctx.lineTo(300, 100);
-		ctx.lineTo(this.end[0], this.end[1]);
-		ctx.stroke();
+	end: [s300, l300],
+	start: [l300, s300],
+
+	distance : function (x,y) {
+		if (y - x >= l300 - s300) {
+			return distanceBetweenPoints([x,y], [s300, l300]);
+		}
+		if (y - x <= s300 - l300) {
+			return distanceBetweenPoints([x,y], [l300, s300]);
+		}
+		return Math.abs(-x + 600 - y) / sqrt2;
+	}
+},
+{
+	// x = 300, y in [450, 150]
+
+	end: [300, 450],
+	start: [300, 150],
+
+	distance : function (x,y) {
+		if (y <= 150) {
+			return distanceBetweenPoints([x,y], [300, 150]);
+		}
+		if (y >= 450) {
+			return distanceBetweenPoints([x,y], [300, 450]);
+		}
+		return Math.abs(x - 300);
 	}
 },
 ]
@@ -185,24 +160,69 @@ var endTime;
 var $c = $("#myCanvas");
 
 $c.mousedown((e) => {
+
+	// if experiment has ended
+	if (connectingDots == -1) {
+		return;
+	}
+
 	var rect = c.getBoundingClientRect();
 	logCoordinate(e.clientX - rect.left, e.clientY - rect.top);
 	startTime = e.timeStamp;
 });
 
 $c.mousemove((e) => {
-	var rect = c.getBoundingClientRect();
-	if (e.buttons >= 1){
-		logCoordinate(e.clientX - rect.left, e.clientY - rect.top);
-		// console.log(e);
+
+	// if experiment has ended
+	if (connectingDots == -1) {
+		return;
 	}
-	updateCanvas();
+
+	if (e.buttons >= 1){
+		var rect = c.getBoundingClientRect();
+		logCoordinate(e.clientX - rect.left, e.clientY - rect.top, e.timeStamp);
+		// console.log(e);
+		updateCanvas();
+	}
 });
 
 $c.mouseup((e) => {
+
+	// if experiment has ended
+	if (connectingDots == -1) {
+		return;
+	}
+
 	endTime = e.timeStamp;
 	clearLog();
 	currentTracingLine = (currentTracingLine + 1) % tracingLines.length;
+	if (currentTracingLine == 0) {
+		currentRun += 1;
+		if (currentRun >= totalRuns) {
+			if (connectingDots == 0) {
+				// move on to the connecting dots task
+				connectingDots = 1;
+				currentRun = 0;
+				$('#hint-text')
+					.html('Please connect the dots using a straight line. Please draw from the blue dot.');
+			} else if (connectingDots == 1) {
+				// everything is finished, end of experiment
+				ctx.clearRect(0, 0, c.width, c.height);
+				ctx.fillStyle = "#ccc";
+				ctx.fillText("end", c.width/2, c.height/2);
+				connectingDots = -1;
+
+				var today = new Date();
+				var dd = String(today.getDate()).padStart(2, '0');
+				var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+				var yyyy = today.getFullYear();
+				var hh = String(today.getHours()).padStart(2, '0');
+				var minute = String(today.getMinutes()).padStart(2, '0');
+				downloadObjectAsJson(sessionLog, yyyy+mm+dd+hh+minute);
+				return;
+			}
+		}
+	}
 	updateCanvas();
 });
 
@@ -212,28 +232,38 @@ function updateCanvas(){
 	ctx.fillStyle = "#ccc";
 	ctx.textAlign = "center";
 	ctx.textBaseline = "middle"; 
-	ctx.fillText(currentTracingLine + 1, c.width/2, c.height/2);
+	ctx.fillText(currentRun + 1, c.width/2, c.height/2);
 
-	ctx.strokeStyle = "green";
-	tracingLines[currentTracingLine].draw(ctx);
+	if (connectingDots == 0) {
+		ctx.strokeStyle = "green";
+		ctx.beginPath();
+		ctx.moveTo(tracingLines[currentTracingLine].start[0], tracingLines[currentTracingLine].start[1]);
+		ctx.lineTo(tracingLines[currentTracingLine].end[0], tracingLines[currentTracingLine].end[1]);
+		ctx.stroke();
 
-	ctx.fillStyle = "blue";
-	ctx.beginPath();
-	ctx.arc(tracingLines[currentTracingLine].start[0], tracingLines[currentTracingLine].start[1], 3, 0, 2 * Math.PI);
-	ctx.fill();
+		ctx.fillStyle = "blue";
+		ctx.beginPath();
+		ctx.arc(tracingLines[currentTracingLine].start[0], tracingLines[currentTracingLine].start[1], 3, 0, 2 * Math.PI);
+		ctx.fill();
+	} else if (connectingDots = 1) { 
+		ctx.fillStyle = "blue";
+		ctx.beginPath();
+		ctx.arc(tracingLines[currentTracingLine].start[0], tracingLines[currentTracingLine].start[1], 3, 0, 2 * Math.PI);
+		ctx.fill();
 
-	// ctx.fillStyle = "red";
-	// ctx.beginPath();
-	// ctx.arc(tracingLines[currentTracingLine].end[0], tracingLines[currentTracingLine].end[1], 3, 0, 2 * Math.PI);
-	// ctx.fill();
+		ctx.fillStyle = "red";
+		ctx.beginPath();
+		ctx.arc(tracingLines[currentTracingLine].end[0], tracingLines[currentTracingLine].end[1], 3, 0, 2 * Math.PI);
+		ctx.fill();
+	}
 
 	// draw the user lines
 	if (userLine.length > 1){
 		ctx.strokeStyle = "black";
 		ctx.beginPath();
-		ctx.moveTo(userLine[0][0], userLine[0][1]);
+		ctx.moveTo(userLine[0].x, userLine[0].y);
 		for (var i = 0; i < userLine.length - 1; i++) {
-			ctx.lineTo(userLine[i][0], userLine[i][1]);
+			ctx.lineTo(userLine[i].x, userLine[i].y);
 		}
 		ctx.stroke();
 	}
@@ -243,22 +273,49 @@ function calculateDistanceToTheTracingLine(userX, userY){
 	return tracingLines[currentTracingLine].distance(userX, userY);
 }
 
-function logCoordinate(x,y){
-	userLine.push([x, y]);
-	var distance = calculateDistanceToTheTracingLine(x, y)
+function logCoordinate(x,y, time){
+	var distance = calculateDistanceToTheTracingLine(x, y);
+	userLine.push(
+		{
+			"x": x, 
+			"y": y, 
+			"time": time,
+			"distance": distance
+		});
 	userDistance.push(distance);
-	console.log(distance);
 }
 
 function clearLog() {
-	if (userDistance && userDistance.length > 1) {
-		var firstUserPointToTracingLineDistance = distanceBetweenPoints(userLine[0], tracingLines[currentTracingLine].start);
-		var lastUserPointToTracingLineDistance = distanceBetweenPoints(userLine[userLine.length - 1], tracingLines[currentTracingLine].end);
+	if (userLine && userLine.length > 2) {
+		var firstUserPointToTracingLineDistance = 
+			distanceBetweenPoints([userLine[0].x, 
+								   userLine[0].y], 
+								   tracingLines[currentTracingLine].start);
+		var lastUserPointToTracingLineDistance = 
+			distanceBetweenPoints([userLine[userLine.length - 1].x, 
+								   userLine[userLine.length - 1].y], 
+								   tracingLines[currentTracingLine].end);
 		userDistance[0] = firstUserPointToTracingLineDistance;
 		userDistance.push(lastUserPointToTracingLineDistance);
+		var averageDistance = userDistance.reduce((a, b) => a + b, 0)/userDistance.length;
+		var score = userDistance.reduce((a, b) => a + b**2, 0)/userDistance.length;
+		sessionLog.push(
+			{
+				"timeStart": startTime,
+				"timeFinished": endTime,
+				"timeElapsed": endTime - startTime,
+				"task": taskNames[connectingDots],
+				"averageDistance": averageDistance,
+				"run": currentRun,
+				"line": currentTracingLine,
+				"score": score,
+				"seq": userLine.slice(1, userLine.length-1)
+			}
+		);
 		console.log("time", (endTime - startTime)/1000);
-		console.log("avg", userDistance.reduce((a, b) => a + b, 0)/userDistance.length);
-		console.log("score", userDistance.reduce((a, b) => a + b**2, 0)/userDistance.length);
+		console.log("avg", averageDistance);
+		console.log("score", score);
+
 	}
 	startTime, endTime = -1, -1;
 	userLine = [];
@@ -273,3 +330,14 @@ updateCanvas();
 function distanceBetweenPoints(p1, p2) {
 	return Math.sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2);
 }
+
+// https://stackoverflow.com/a/30800715
+function downloadObjectAsJson(exportObj, exportName){
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href",     dataStr);
+    downloadAnchorNode.setAttribute("download", exportName + ".json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+  }
