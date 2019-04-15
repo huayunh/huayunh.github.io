@@ -21,7 +21,7 @@ const tracingLines = [
 		} else if (x + y >= l300 * 2){
 			return distanceBetweenPoints([x,y], [l300, l300]);
 		}
-		return Math.abs(x - y) / sqrt2;
+		return -Math.abs(x - y) / sqrt2;
 	}
 }, 
 {
@@ -37,7 +37,7 @@ const tracingLines = [
 		if (x >= 450) {
 			return distanceBetweenPoints([x,y], [450, 300]);
 		}
-		return Math.abs(y - 300);
+		return -Math.abs(y - 300);
 	}
 },
 {
@@ -53,7 +53,7 @@ const tracingLines = [
 		if (y - x <= s300 - l300) {
 			return distanceBetweenPoints([x,y], [l300, s300]); 
 		}
-		return Math.abs(-x + 600 - y) / sqrt2;
+		return -Math.abs(-x + 600 - y) / sqrt2;
 	}
 },
 {
@@ -69,7 +69,7 @@ const tracingLines = [
 		if (y >= 450) {
 			return distanceBetweenPoints([x,y], [300, 450]);
 		}
-		return Math.abs(x - 300);
+		return -Math.abs(x - 300);
 	}
 },
 {
@@ -85,7 +85,7 @@ const tracingLines = [
 		} else if (x + y >= l300 * 2){
 			return distanceBetweenPoints([x,y], [l300, l300]);
 		}
-		return Math.abs(x - y) / sqrt2;
+		return -Math.abs(x - y) / sqrt2;
 	}
 }, 
 {
@@ -101,7 +101,7 @@ const tracingLines = [
 		if (x >= 450) {
 			return distanceBetweenPoints([x,y], [450, 300]);
 		}
-		return Math.abs(y - 300);
+		return -Math.abs(y - 300);
 	}
 },
 {
@@ -117,7 +117,7 @@ const tracingLines = [
 		if (y - x <= s300 - l300) {
 			return distanceBetweenPoints([x,y], [l300, s300]);
 		}
-		return Math.abs(-x + 600 - y) / sqrt2;
+		return -Math.abs(-x + 600 - y) / sqrt2;
 	}
 },
 {
@@ -133,7 +133,7 @@ const tracingLines = [
 		if (y >= 450) {
 			return distanceBetweenPoints([x,y], [300, 450]);
 		}
-		return Math.abs(x - 300);
+		return -Math.abs(x - 300);
 	}
 },
 ]
@@ -173,6 +173,7 @@ var startTime;
 var endTime;
 var currentPointerLocation;
 var currentPointerPressure;
+var endPointDistance;
 
 var $c = $("#myCanvas");
 
@@ -335,21 +336,24 @@ function updateCanvas(){
 	}
 }
 
-function calculateDistanceToTheTracingLine(userX, userY){
-	return tracingLines[currentTracingLine].distance(userX, userY);
-}
-
 function logCoordinate(x,y, time, pressure){
-	var distance = calculateDistanceToTheTracingLine(x, y);
+	var distance = tracingLines[currentTracingLine].distance(x, y);
 	userLine.push(
 		{
 			"x": x, 
 			"y": y, 
 			"time": time,
-			"distance": distance,
+			"distance": Math.abs(distance),
 			"pressure": pressure
 		});
-	userDistance.push(distance);
+
+	if (distance < 0) {
+		// if middle
+		userDistance.push(-distance);
+	} else {
+		// head / tail
+		endPointDistance.push(distance);
+	}
 }
 
 function clearLog() {
@@ -364,7 +368,7 @@ function clearLog() {
 								   userLine[userLine.length - 1].y], 
 								   tracingLines[currentTracingLine].end);
 		userDistance[0] = firstUserPointToTracingLineDistance;
-		userDistance.push(lastUserPointToTracingLineDistance);
+		// userDistance.push(lastUserPointToTracingLineDistance * 0.3);
 		var userDistanceLength = userDistance.length;
 		var averageDistance = userDistance.reduce((a, b) => a + b, 0)/userDistanceLength;
 
@@ -377,25 +381,47 @@ function clearLog() {
 
 		var totalUserDistance = 0;
 		for (var i = 0; i < userDistance.length; i++) {
-			totalUserDistance += (userDistance[i] ** 2) * (alpha * (i ** 2) + beta * i + 0.25);
+
+			var curvingFactor = alpha * (i ** 2) + beta * i + 0.5;
+			totalUserDistance += (userDistance[i] ** 2) * curvingFactor;
+			
+			// score the smoothness by factor in the wiggling
+			totalUserDistance += Math.abs(userDistance[i] - averageDistance);
+			if (userDistance[i] - averageDistance > 5) {
+				totalUserDistance += (userDistance[i] - averageDistance - 5)**2 * curvingFactor;
+			}
+
 		}
 		var score = totalUserDistance / userDistanceLength;
+		var tracingScore = score;
+
+		// acccount for overshooting at the endpoints
+		totalUserDistance = 0;
+		for (var i = 0; i < endPointDistance.length; i++) {
+			if (endPointDistance[i] > 10) {
+				totalUserDistance += (endPointDistance[i] - 10);
+			}
+		}
+		var overshootScore = totalUserDistance / endPointDistance.length
+		score += Math.min(overshootScore, tracingScore * 0.5);
+
 		sessionLog.push(
 			{
-				"timeStart": startTime,
-				"timeFinished": endTime,
 				"timeElapsed": endTime - startTime,
 				"task": taskNames[connectingDots],
 				"averageDistance": averageDistance,
 				"run": currentRun,
 				"line": currentTracingLine,
 				"score": score,
+				"overshootScore": overshootScore,
+				"tracingScore": tracingScore,
 				"seq": userLine.slice(1, userLine.length-1)
 			}
 		);
 		console.log("time", (endTime - startTime)/1000);
 		console.log("avg", averageDistance);
 		console.log("score", score);
+		console.log("tracing", tracingScore, "endpoints", overshootScore);
 
 		startTime = -1;
 		endTime = -1;
@@ -403,6 +429,7 @@ function clearLog() {
 		userDistance = [-1];
 		currentPointerLocation = [-1, -1];
 		currentPointerPressure = 0;
+		endPointDistance = [-1];
 		return true;
 	}
 
@@ -413,6 +440,7 @@ function clearLog() {
 	userDistance = [-1];
 	currentPointerLocation = [-1, -1];
 	currentPointerPressure = 0;
+	endPointDistance = [-1];
 	return false;
 }
 

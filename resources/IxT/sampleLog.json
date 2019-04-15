@@ -1,13 +1,13 @@
 [
 	// for each line drawn by the user
 	{
-		"timeStart": 123,
-		"timeFinished": 123,
 		"task": "tracing",
 		"averageDistance": 123,
 		"run": 0,
 		"line": 2,
 		"score": 2,
+		"overshootScore": 1, // score points resulted from overshooting
+		"tracingScore": 1, // score points resulted from off-the-curve
 		"seq": [
 			{
 				"x": 123,
