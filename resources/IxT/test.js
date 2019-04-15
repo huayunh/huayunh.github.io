@@ -365,8 +365,21 @@ function clearLog() {
 								   tracingLines[currentTracingLine].end);
 		userDistance[0] = firstUserPointToTracingLineDistance;
 		userDistance.push(lastUserPointToTracingLineDistance);
-		var averageDistance = userDistance.reduce((a, b) => a + b, 0)/userDistance.length;
-		var score = userDistance.reduce((a, b) => a + b**2, 0)/userDistance.length;
+		var userDistanceLength = userDistance.length;
+		var averageDistance = userDistance.reduce((a, b) => a + b, 0)/userDistanceLength;
+
+		// trying to "curve" the distance, so that it emphasize on the middle of the curve 
+		// (instead) of the beginning and the end of the user line
+		// curve distance as "f(x) = ax^2 + bx + 0.25"
+		// a,b = alpha,beta as follow:
+		var alpha = - 3.0 / ((userDistanceLength - 1) ** 2);
+		var beta = 3.0 / (userDistanceLength - 1);
+
+		var totalUserDistance = 0;
+		for (var i = 0; i < userDistance.length; i++) {
+			totalUserDistance += (userDistance[i] ** 2) * (alpha * (i ** 2) + beta * i + 0.25);
+		}
+		var score = totalUserDistance / userDistanceLength;
 		sessionLog.push(
 			{
 				"timeStart": startTime,
