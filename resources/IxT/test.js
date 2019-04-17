@@ -207,7 +207,7 @@ $c.mouseup((e) => {
 					connectingDots = 1;
 					currentRun = 0;
 					$('#hint-text')
-						.html('Please connect the dots using a straight line. Please draw from the blue dot.');
+						.html('Please draw from the blue dot to the red dot.');
 				} else if (connectingDots == 1) {
 					// everything is finished, end of experiment
 					ctx.clearRect(0, 0, c.width, c.height);
@@ -368,7 +368,7 @@ function clearLog() {
 								   userLine[userLine.length - 1].y], 
 								   tracingLines[currentTracingLine].end);
 		userDistance[0] = firstUserPointToTracingLineDistance;
-		// userDistance.push(lastUserPointToTracingLineDistance * 0.3);
+		userDistance.push(lastUserPointToTracingLineDistance);
 		var userDistanceLength = userDistance.length;
 		var averageDistance = userDistance.reduce((a, b) => a + b, 0)/userDistanceLength;
 
@@ -407,6 +407,8 @@ function clearLog() {
 
 		sessionLog.push(
 			{
+				"timeStart": startTime,
+				"timeEnd": endTime,
 				"timeElapsed": endTime - startTime,
 				"task": taskNames[connectingDots],
 				"averageDistance": averageDistance,
@@ -421,7 +423,8 @@ function clearLog() {
 		console.log("time", (endTime - startTime)/1000);
 		console.log("avg", averageDistance);
 		console.log("score", score);
-		console.log("tracing", tracingScore, "endpoints", overshootScore);
+		console.log("tracing", tracingScore);
+		console.log("endpoints", overshootScore);
 
 		startTime = -1;
 		endTime = -1;
