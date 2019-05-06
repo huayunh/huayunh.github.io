@@ -2,6 +2,27 @@
     display: none; 
 }
 
+a.end-of-article-external-link {
+  text-decoration: none;
+}
+
+div.end-of-article-external-link {
+  margin: 10px 0;
+  padding: 15px 20px;
+  color: var(--p-font-color);
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-family: sans-serif;
+  width: 200px;
+  box-shadow: var(--box-shadow-3dp);
+}
+
+.end-of-article-external-link:hover {
+  box-shadow: var(--box-shadow-8dp);
+  transition-duration: 250ms;
+}
+
 section {
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
