@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="435px" viewBox="0 0 512 435" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>during (line tracing) copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="during-(line-tracing)-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="512" height="435"></rect>
+        <path d="M73.5069252,394.493075 L438.051495,29.9485046" id="Line" stroke="#90DD80" stroke-width="4" stroke-linecap="square"></path>
+        <circle id="Oval" fill="#0082FF" cx="73.5" cy="395.5" r="16.5"></circle>
+        <path d="M73,395 C73.0748146,344.242029 86.7935306,305.453227 114.156148,278.633593 C155.200074,238.404142 244.127595,283.952474 292.247449,240.243742 C324.327352,211.104587 357.578202,200.034392 392,207.033157" id="Path-2" stroke="#000000" stroke-width="5"></path>
+        <circle id="Oval" stroke="#90DD80" stroke-width="4" cx="391.5" cy="207.5" r="48.5"></circle>
+        <circle id="Oval" fill="#000000" opacity="0.504557292" cx="391.5" cy="207.5" r="25.5"></circle>
+    </g>
+</svg>

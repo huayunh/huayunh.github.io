@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1805px" height="1258px" viewBox="0 0 1805 1258" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="100" y="102" width="508" height="523"></rect>
+        <filter x="-3.1%" y="-2.2%" width="106.1%" height="105.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129916958 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="100" y="659" width="508" height="523"></rect>
+        <filter x="-3.1%" y="-2.2%" width="106.1%" height="105.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.129916958 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="1805" height="1258"></rect>
+        <g id="Rectangle">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <rect stroke="#CDCDCD" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="100.5" y="102.5" width="507" height="522"></rect>
+        </g>
+        <g id="Rectangle">
+            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            <rect stroke="#CDCDCD" stroke-width="1" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd" x="100.5" y="659.5" width="507" height="522"></rect>
+        </g>
+        <ellipse id="Oval" fill="#0082FF" cx="798" cy="908.5" rx="32" ry="31.5"></ellipse>
+        <circle id="Oval-Copy" fill="#FF6969" cx="1502" cy="203" r="32"></circle>
+        <path d="M796,908 C796.14447,810.22412 822.635783,735.504637 875.473941,683.841553 C954.731177,606.346926 1126.45329,694.087398 1219.37438,609.890576 C1281.32178,553.759362 1345.53032,532.434671 1412,545.916503" id="Path-2" stroke="#000000" stroke-width="5"></path>
+        <ellipse id="Oval" stroke="#90DD80" stroke-width="4" cx="1410" cy="546.5" rx="93" ry="93.5"></ellipse>
+        <ellipse id="Oval" fill="#000000" opacity="0.504557292" cx="1410" cy="547" rx="49" ry="50"></ellipse>
+        <text id="Starting-point,-alwa" font-family="Overpass-Bold, Overpass" font-size="33" font-weight="bold" fill="#000000">
+            <tspan x="698" y="1051">Starting point</tspan>
+            <tspan x="908.111" y="1051" font-family="Overpass-Regular, Overpass" font-weight="normal">, </tspan>
+            <tspan x="698" y="1092" font-family="Overpass-Regular, Overpass" font-weight="normal">always a blue dot </tspan>
+        </text>
+        <text id="Trace-pressure-circl" font-family="Overpass-Bold, Overpass" font-size="33" font-weight="bold" fill="#000000">
+            <tspan x="953" y="789">Trace pressure </tspan>
+            <tspan x="953" y="830">circle</tspan>
+            <tspan x="1037.942" y="830" font-family="Overpass-Regular, Overpass" font-weight="normal">, indicating </tspan>
+            <tspan x="953" y="871" font-family="Overpass-Regular, Overpass" font-weight="normal">how much pressure </tspan>
+            <tspan x="953" y="912" font-family="Overpass-Regular, Overpass" font-weight="normal">the user needs to </tspan>
+            <tspan x="953" y="953" font-family="Overpass-Regular, Overpass" font-weight="normal">apply</tspan>
+        </text>
+        <text id="User-pressure-circle" font-family="Overpass-Bold, Overpass" font-size="33" font-weight="bold" fill="#000000">
+            <tspan x="1319" y="812">User pressure</tspan>
+            <tspan x="1531.487" y="812" font-family="Overpass-Regular, Overpass" font-weight="normal"> </tspan>
+            <tspan x="1319" y="853">circle</tspan>
+            <tspan x="1403.942" y="853" font-family="Overpass-Regular, Overpass" font-weight="normal">, indicating </tspan>
+            <tspan x="1319" y="894" font-family="Overpass-Regular, Overpass" font-weight="normal">how much pressure </tspan>
+            <tspan x="1319" y="935" font-family="Overpass-Regular, Overpass" font-weight="normal">the user is actually </tspan>
+            <tspan x="1319" y="976" font-family="Overpass-Regular, Overpass" font-weight="normal">applying</tspan>
+        </text>
+        <text id="Finishing-point,-a-r" font-family="Overpass-Bold, Overpass" font-size="33" font-weight="bold" fill="#000000">
+            <tspan x="1191" y="122">Finishing point</tspan>
+            <tspan x="1414.674" y="122" font-family="Overpass-Regular, Overpass" font-weight="normal">, </tspan>
+            <tspan x="1191" y="163" font-family="Overpass-Regular, Overpass" font-weight="normal">a red circle</tspan>
+        </text>
+        <text id="User-line,-drawn-by" font-family="Overpass-Bold, Overpass" font-size="33" font-weight="bold" fill="#000000">
+            <tspan x="766" y="547">User line</tspan>
+            <tspan x="900.508" y="547" font-family="Overpass-Regular, Overpass" font-weight="normal">, drawn </tspan>
+            <tspan x="766" y="588" font-family="Overpass-Regular, Overpass" font-weight="normal">by the user</tspan>
+        </text>
+        <path d="M796.972973,632 L867.027027,692.016129" id="Line-2" stroke="#000000" stroke-linecap="square"></path>
+        <path d="M1412,131.964286 L1480.04167,184.035714" id="Line-2-Copy-3" stroke="#000000" stroke-linecap="square"></path>
+        <path d="M782.022727,935.965909 L740.977273,1020" id="Line-2-Copy" stroke="#000000" stroke-linecap="square"></path>
+        <path d="M1338,611.9625 L1103.96311,764.0375" id="Line-2-Copy" stroke="#000000" stroke-linecap="square"></path>
+        <path d="M1434.95833,588.967033 L1503,764" id="Line-2-Copy" stroke="#000000" stroke-linecap="square"></path>
+        <circle id="Oval" fill="#0082FF" cx="171.5" cy="1103.5" r="16.5"></circle>
+        <circle id="Oval-Copy" fill="#FF6969" cx="537.5" cy="737.5" r="16.5"></circle>
+        <path d="M171,1103 C171.074815,1052.24203 184.793531,1013.45323 212.156148,986.633593 C253.200074,946.404142 342.127595,991.952474 390.247449,948.243742 C422.327352,919.104587 455.578202,908.034392 490,915.033157" id="Path-2" stroke="#000000" stroke-width="5"></path>
+        <circle id="Oval" stroke="#90DD80" stroke-width="4" cx="489.5" cy="915.5" r="48.5"></circle>
+        <circle id="Oval" fill="#000000" opacity="0.504557292" cx="489.5" cy="915.5" r="25.5"></circle>
+        <circle id="Oval" fill="#0082FF" cx="171.5" cy="547.5" r="16.5"></circle>
+        <circle id="Oval-Copy" fill="#FF6969" cx="537.5" cy="181.5" r="16.5"></circle>
+    </g>
+</svg>

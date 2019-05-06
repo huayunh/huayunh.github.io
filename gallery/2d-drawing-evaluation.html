@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="../css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/gallery.css"/>
+
+	<!-- data -->
+	<title>Evaluating 2D Drawings | Huayun Huang</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../favicon.png" />
+</head>
+<body>
+	<nav>
+		<a href="../gallery.html" class="mobile"><img src="asset/back_arrow.svg"></a>
+		<a href="../gallery.html" class="mobile index-page-text">Gallery</a>
+
+		<a href="../index.html" class="no-mobile"><img src="../asset/logo.svg"></a>
+		<a href="../index.html" class="no-mobile index-page-text">Huayun Huang</a>
+		<ul class="no-mobile">
+			<li><a href="../index.html#about">Contact Me</a></li>
+			<li><a href="../gallery.html">Gallery</a></li>
+		</ul>
+	</nav>
+
+	<main class="wrapper">
+	  <section class="parallax">
+	    <h1>Evaluating 2D Drawings</h1>
+	    <span style="background-image: url('../gallery/asset/line tracing.svg');"><div class="mask"></div></span>
+	  </section>
+	  <section class="static">
+	  	<div class="text-section">
+		    <h2>Evaluating 2D Drawings</h2>
+		    <div class="tagContainer">
+				<span>class</span>
+			</div>
+			<p class="project-time">May 2019</p>
+			
+			<div class="nutshell">
+				<div>
+					<h4>Task</h4>
+					<ul>
+						<li>Design an experiment to evaluate digital 2D drawings</li>
+						<li>Comparative Analysis</li>
+						<li>Interview professional artists for their thoughts on hand drawings and our experiment</li>
+						<li>Implement the technologies for the experiment</li>
+						<li>Conduct the experiment</li>
+						<li>Present to our class and write a report to it</li>
+					</ul>
+				</div>
+				<div>
+					<h4>What I did</h4>
+					<ul>
+						<li>Led the group discussion</li>
+						<li>Implemented the technologies using HTML canvas</li>
+						<li>Designed and presented the slides</li>
+						<li>Wrote the final report</li>
+						<li>Praised by the professor "can definitely be turned into a publishable paper"</li>
+						<!-- <li>Received an A+ as the final grade</li> -->
+					</ul>
+				</div>
+				<div>
+					<h4>Challenges</h4>
+					<ul>
+						<li>Cannot find enough participants</li>
+						<li>No other literatures looked into a comparison between artists and non-artists, or attacking the problem from an artist's perspective</li>
+					</ul>
+				</div>
+				<div>
+					<h4>What I learned</h4>
+					<p>The followings are some insights we gained from the experiment: </p>
+					<ul>
+						<li>For artists, “area under curve” impacts their judgment on accuracy the most </li>
+						<li>Some directions are harder to draw </li>
+						<li>People are pushed into speed-precision tradeoff when facing different tasks</li>
+						<li>The pressure is consistent within an individual no matter what the task is</li>
+					</ul>
+				</div>
+			</div>
+
+			
+			<h3>Abstract</h3>
+			<p>Starting from the SketchPad in 1963, many tools have been invented to help 2D artists create their graphics. Our experiment aims to perform a case study, comparing the performance of artists and non-artists using different tasks (trace-rating, line-tracing, dot-connecting). We conducted the experiment on 5 different participants, and learned (1) for artists, “area under curve” impacts their judgment on accuracy the most; (2) some directions are harder to draw (3) people are pushed into speed-precision tradeoff when facing different tasks; (4) the pressure is consistent within an individual no matter what the task is.</p>
+
+			<h3>Procedure</h3>
+
+			<ol>
+				<li>Design an experiment to evaluate digital 2D drawings with styluses</li>
+				<li>Comparative analysis / market research on current styluses available on the market</li>
+				<li>Interview professional artists for their thoughts on hand drawings and our experiment</li>
+				<li>Implement the technologies for the experiment</li>
+				<li>Conduct the experiment</li>
+				<li>Present to our class and write a report to it</li>
+			</ol>
+
+			<h3>Interview</h3>
+
+			<p> We interviewed professors and students in creative disciplines. There were three categories of questions: demographic, technology, and interaction technique, to get a well-rounded view of the person and their digital drawings methods. </p>
+
+			<p>We learned from all three interviewees that the lightweight caused by a pressure sensitive tip is incredibly important. This is an important factor in creating a more realistic digital drawing experience. Similarly, the less lag there is between where the user’s pen is and where the line is being drawn on the digital interface is creates a more realistic feel; this appeared to be slightly more important for direct drawing methods rather than indirect.</p>
+
+			<p>One professor, Doug Cooper, in particular, thought that computers can be “too good at being too precise”. By this, he was referencing to the “auto-neatening” of wiggly lines to straight lines or uniforming subtly varying pressure in line weight to a constant line weight, though he noted this is typically the result of the graphics software or operating system a user is using rather than directly the stylus. He thinks that it is important for lines to have character and vagueness, especially in early stages of sketches and projects, and through digitization, you often lose this and the dimensionality can become flattened. Another professor, Eddy Man Kim, noted that though digital drawings are immensely important in this new media age, students should learn analog drawing skills first to have a deft hand and then translate to digital, rather than start with digital. We think this will show in the tests in the comparison of artists drawings who were trained to hand draw to people who were not trained to hand draw.</p>
+
+			<p>We took some of these insights, especially the importance of pressure sensitivity, in consideration of the design of the experiment.</p>
+
+			<h3>Experiment Design</h3>
+
+			<h4>Set Up</h4>
+
+			<p>Initially, we planned to test three different input methods: the Wacom tablet, Apple Pencil, and mouse. However, due to the availability of technologies, as well as the scope of this assignment, we narrowed down to use only Wacom tablet on a chrome browser. The participant is instructed to sit on a chair, with the laptop on the table facing them. They will be instructed to use their dominant hand in their favored hand position.</p>
+
+			<div class="in-text-img">
+				<img src="asset/IMG_8656.JPG" />
+				<p>A participant is drawing with the Wacom Stylus</p>
+			</div>
+
+			<h4>Participants</h4>
+
+			<p>We plan on testing our software with people who consider themselves artists and are familiar with drawing, both analog and digital. This includes both students and professors. We also plan on testing on people who are not artists as a way of comparison. We tested our software with 3 artists (2 art students, 1 art professor) and 2 non-artists (1 computer scientist, 1 professional writer), all recruited by personal networks. Although we only tested on five participants, we planned for a participants pool with a wide diversity to compare the results between artists and non-artists.</p>
+
+			<h4>Tasks and metrics</h4>
+
+			<h5>Task 1: Trace Rating</h5>
+
+			<p>We showed our artists some tracing examples, and ask "How well do you think this tracing is drawn?" We made them to give it rating from 1 to 10.</p>
+
+			<div class="in-text-img small-img">
+				<img src="asset/Screen Shot 2019-05-06 at 4.28.37 PM.png" />
+				<p>"How well is this tracing is done?"</p>
+			</div>
+
+			<p>The samples will differ in qualities such as their smoothness, maximum distance off the given trace line, etc. The participants will then be asked to rate each sample tracings based on their tracing accuracies and explain their rationales. We recorded their ratings and generalized how artists perceive a line as being accurate.</p>
+
+			<h5>Task 2: Line Tracing</h5>
+
+			<div class="in-text-img">
+				<img src="asset/line-tracing.svg" />
+				<p>Software interface during Task 2: Line Tracing. Top left: Before the participant starts to stroke. Bottom left: while the participant is stroking. Right:while the participant is stroking, annotated.</p>
+			</div>
+
+			<p>The trace line varies in length, slope, and direction. Each participant will complete the line tracing task in 10 runs of the eight directions of lines, totaling to 80 lines drawn. A test run will be conducted at the beginning of each session to familiarize the participant with the interaction technique. The participants are instructed to draw the lines as quickly and accurately as possible while staying within the proper pressure. </p>
+
+			<h5>Task 3: Dot Connecting</h5>
+
+			<div class="in-text-img">
+				<img src="asset/dot-connecting.svg" />
+				<p>Software interface during Task 3: Dot Connecting. Top left: Before the participant starts to stroke. Bottom left: while the participant is stroking. Right:while the participant is stroking, annotated.</p>
+			</div>
+
+			<p>The trace line varies in length, slope, and direction. Each participant will complete the line tracing task in 10 runs of the eight directions of lines, totaling to 80 lines drawn. A test run will be conducted at the beginning of each session to familiarize the participant with the interaction technique. The participants are instructed to draw the lines as quickly and accurately as possible while staying within the proper pressure. </p>
+
+			<h3>Results & Discussions</h3>
+
+			<p>Using Numbers, Apple’s equivalent of Microsoft Excel, we performed several data visualizations on the data we gathered, which resulted in some interesting findings:</p>
+
+			<ol>
+				<li>“Area under curve” impacts an artist’s judgment on accuracy the most.</li>
+				<li>Some directions are harder to draw</li>
+				<li>For some people, the pressure is consistent within an individual no matter what the task is</li>
+				<li>Speed-precision tradeoff</li>
+			</ol>
+
+			<p>A more detailed explanation is documented in the final report.</p>
+
+			<a href="asset/IxT Final Report.pdf" class="end-of-article-external-link" target="_blank">
+				<div class="end-of-article-external-link">Final Report</div>
+			</a>
+			<a href="https://docs.google.com/presentation/d/1cSGHvOrBTsAWlfjOavLutR-qAyPTSsyXOQ4tRSz2huY/edit?usp=sharing" class="end-of-article-external-link" target="_blank">
+				<div class="end-of-article-external-link">Final Presentation</div>
+			</a>
+			<a href="https://huayunh.github.io/resources/IxT/test.html" class="end-of-article-external-link" target="_blank">
+				<div class="end-of-article-external-link">Demo</div>
+			</a>
+			<a href="https://github.com/huayunh/huayunh.github.io/tree/master/resources/IxT" class="end-of-article-external-link" target="_blank">
+				<div class="end-of-article-external-link">GitHub Source</div>
+			</a>
+
+		</div>
+
+		<a class="check-out-more-anchor" href="personal-website-remastered.html"><div class="check-out-more-box">
+			<p class="check-out-more-label">Check out more</p>
+			<p class="check-out-more-title">
+				Personal Website Remastered
+			</p>
+			<p class="check-out-more-description">
+				Redesigned my personal website for future potential employers.
+			</p>
+		</div></a>
+	  </section>
+	</main>
+
+</body>
+</html>
