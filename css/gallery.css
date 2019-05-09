@@ -111,7 +111,36 @@ section:first-child h1 {
   width: 70%;
   margin: 0 auto;
   display: block;
+}
 
+.in-text-img.xs-img img{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.in-text-table .table-wrapper {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.in-text-table .table-title {
+  text-align: center;
+  font-size: 80%;
+  color: #777;
+}
+
+.in-text-table table {
+  border-collapse: collapse;
+  width: 100%; 
+  font-family: sans-serif;
+}
+
+.in-text-table table th, td {
+  border-bottom: 1px solid #ddd;
+  font-size: 80%; 
+  text-align: center;
+  padding: 8px;
 }
 
 /* the check-out-more box at the bottom */
@@ -218,5 +247,11 @@ section:first-child h1 {
     margin: unset;
     width: 100%;
   }
+
+  .in-text-img.xs-img img{
+  width: 40%;
+  margin: 0 auto;
+  display: block;
+}
 
 }

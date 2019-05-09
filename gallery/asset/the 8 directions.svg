@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>the 8 directions</title>
+    <desc>Created with Sketch.</desc>
+    <g id="the-8-directions" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="512" height="512"></rect>
+        <path d="M74.5,255.5 L436.93995,255.5" id="Line-3" stroke="#42AB3C" stroke-width="3" stroke-linecap="square" stroke-dasharray="8"></path>
+        <path d="M74.5,255.5 L436.93995,255.5" id="Line-3" stroke="#42AB3C" stroke-width="3" stroke-linecap="square" stroke-dasharray="8" transform="translate(255.500000, 255.500000) rotate(45.000000) translate(-255.500000, -255.500000) "></path>
+        <path d="M74.5,255.5 L436.93995,255.5" id="Line-3" stroke="#42AB3C" stroke-width="3" stroke-linecap="square" stroke-dasharray="8" transform="translate(255.500000, 255.500000) rotate(90.000000) translate(-255.500000, -255.500000) "></path>
+        <path d="M74.5,255.5 L436.93995,255.5" id="Line-3" stroke="#42AB3C" stroke-width="3" stroke-linecap="square" stroke-dasharray="8" transform="translate(255.500000, 255.500000) rotate(135.000000) translate(-255.500000, -255.500000) "></path>
+        <text id="8" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="246.867188" y="50">8</tspan>
+        </text>
+        <text id="4" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="246.867188" y="473">4</tspan>
+        </text>
+        <text id="1" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="100.367188" y="124">1</tspan>
+        </text>
+        <text id="7" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="392.367188" y="124">7</tspan>
+        </text>
+        <text id="5" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="392.367188" y="406">5</tspan>
+        </text>
+        <text id="3" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="100.367188" y="406">3</tspan>
+        </text>
+        <text id="2" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="42.3671875" y="268">2</tspan>
+        </text>
+        <text id="6" font-family="OpenSans-SemiBold, Open Sans" font-size="32" font-weight="500" fill="#000000">
+            <tspan x="450.367188" y="268">6</tspan>
+        </text>
+        <text id="Starting-From" font-family="OpenSans-Regular, Open Sans" font-size="17" font-weight="normal" fill="#000000">
+            <tspan x="21.0075684" y="81">Starting From</tspan>
+        </text>
+    </g>
+</svg>

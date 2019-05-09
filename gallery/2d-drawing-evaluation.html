@@ -160,7 +160,83 @@
 				<li>Speed-precision tradeoff</li>
 			</ol>
 
-			<p>A more detailed explanation is documented in the final report.</p>
+			<h4>Insight 1: “Area under curve” impacts an artist’s judgment on accuracy the most.</h4>
+
+			<div class="in-text-img xs-img">
+				<img src="asset/area under curve.svg" />
+				<p>The dark line denotes the user line, the green line denotes the trace line. The grey area in between them is the “area-under curve”.</p>
+			</div>
+
+			<p>During task 1: Trace Rating, artists tend to rate those with a higher “area under curve” with a lower score. That is, the further the user line deviates from the trace line, the worse the artists think the line is traced. However, artists disagree with each other when it comes to the smoothness of the curve. Some artists factor smoothness a lot into their ratings, while other artists appear to be not heavily influenced by it.</p>
+
+			<h4>Insight 2: Some directions are harder to draw</h4>
+
+			<div class="in-text-img xs-img">
+				<img src="asset/the 8 directions.svg" />
+				<p>Eight directions the participants drew during the experiment.</p>
+			</div>
+
+			<p>During the data analysis phase, we found that some certain directions are harder to draw. Participants drawing in direction #4, #5, and #7 either took longer time to finish their stroke, deviate a lot from the given trace line, or both. </p>
+
+			<p>How do we measure their performance in each direction? For a given participant and a given direction, we calculate the average time it takes to finish a line stroke and the average distance between the user line and the trace line. Multiplying the time and distance together, we were able to obtain a rough estimate of their <strong>performance score</strong>. The higher the performance score is, longer and more inaccurate participants stroked in the experiment, and the worse they draw.</p>
+
+			<div class="in-text-table">
+				<p class="table-title">The direction in which the participant has the highest performance score. <strong>Note</strong> that participant 4 performed equally bad on direction #4, #5, #7, with only a 1% difference between their performance scores. (Other directions listed in this table differ from their second-to-worst by 6% ~ 23% in their performance score)</p>
+				<div class="table-wrapper">
+					<table>
+						<tr>
+							<th>-</th>
+							<th>Participant 1</th>
+							<th>Participant 2</th>
+							<th>Participant 3</th>
+							<th>Participant 4</th>
+							<th>Participant 5</th>
+						</tr>
+						<tr>
+							<td>Task 2: Line-tracing</td>
+							<td>4</td>
+							<td>5</td>
+							<td>4</td>
+							<td>4, 5, 7</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>Task 3: Dot-connecting</td>
+							<td>7</td>
+							<td>8</td>
+							<td>5</td>
+							<td>7</td>
+							<td>3</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<p>As we can see in the table above, direction #4, #5 and #7 occur more frequently. This is suggesting that #4, #5, #7 have a higher performance score, and thus are harder to draw.</p>
+
+			<h4>Insight 3: The pressure is consistent within a individual no matter what the task is</h4>
+
+			<p>Due to some technical problems with JavaScript, we were only able to collect the pressure tracing data from participant #3, #4 and #5. Among all of them, we found that they tend to apply the same amount of pressure in a given direction.</p>
+
+			<div class="in-text-img">
+				<a href="asset/pressure illustration.png"><img src="asset/pressure illustration.png" /></a>
+				<p>Average pressure applied in each direction by Participant #3, #4 and #5</p>
+			</div>
+
+			<p>This is similar to what we had in Insight 2: people apply different strategies while drawing, and the amount of art training they received, as well as their natural hand structures, can affect the pressure they applied to their pen tip. However, this “pressure trait” is not as obvious when it comes to speed and accuracy metrics.</p>
+
+			<h4>Insight 4: Speed-precision tradeoff</h4>
+
+			<p>The two drawing tasks, Line-Tracing and Dot-Connecting, differ from each other in that people attack the two drawing tasks differently.</p>
+
+			<div class="in-text-img small-img">
+				<a href="asset/speed-precision-tradeoff.png"><img src="asset/speed-precision-tradeoff.png" /></a>
+				<p>Bar chart of the average time per stroke and distance to trace line of each participant. </p>
+			</div>
+
+			<p>In general, artists draw both faster and more accurate than non-artists. However, when they are doing the line-tracing task, both artists and non-artists tend to focus on their accuracy; when they are doing the dot-connecting task, both tend to focus on the speed.</p>
+
+			<p>This results in the well-known speed-accuracy tradeoff, which has been found in other literature too: in Gowen and Miall’s 2006 study, it was found that people have small saccades in front of the moving pen during tracing tasks; when it came to drawing, however, the gap between saccades grew larger. It is thus suggested that tracing “demands continual comparison between the line to be traced and pen tip, which in turn requires the continual transfer of this visual information to the hand movement system.” Drawing, on the other hand, has less emphasis on visual feedbacks and memory-guidance would play a more critical role. </p>
 
 			<a href="asset/IxT Final Report.pdf" class="end-of-article-external-link" target="_blank">
 				<div class="end-of-article-external-link">Final Report</div>
