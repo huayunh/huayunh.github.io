@@ -113,6 +113,10 @@ section:first-child h1 {
   display: block;
 }
 
+.in-text-img a img {
+  cursor: zoom-in;
+}
+
 .in-text-img.xs-img img{
   width: 70%;
   margin: 0 auto;
