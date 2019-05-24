@@ -97,6 +97,10 @@ section:first-child h1 {
 
 }
 
+.in-text-img {
+  position: relative;
+}
+
 .in-text-img img {
   width: 100%;
 }
@@ -234,7 +238,7 @@ section:first-child h1 {
   /* on desktop, enable the parallax effect */
   main {
     perspective: 2px;
-    height: 100vh;
+    height: calc(100vh - 60px);
     overflow-x: hidden;
     overflow-y: auto;
   }
