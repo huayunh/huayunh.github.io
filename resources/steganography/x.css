@@ -1,0 +1,96 @@
+body {
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+	font-weight: 100;
+	font-size: 120%;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.images {
+	width: 80vw;
+	max-width: 800px;
+	height: 30vw;
+	max-height: 300px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.images div {
+	width: 48%;
+	height: 96%;
+	display: inline-block;
+	background-size: cover;
+	margin: 0;
+}
+
+.images div:hover {
+	box-shadow: inset 0 0 0 5px #63BBFF99;
+	transition-duration: 200ms;
+}
+
+.images div.selected {
+	box-shadow: inset 0 0 0 5px #63BBFF;
+}
+
+.ui-widget-header {
+	background: #63BBFF 50% 50% repeat-x!important;
+}
+
+.display {
+	opacity: 1!important;
+	transition-duration: 200ms;
+}
+
+#image2 {
+	float: right;
+}
+
+#progressbar {
+    height:10px;
+    width: 300px;
+    margin: 30px auto 20px;
+    max-width: 70%;
+ }
+
+#problem-number {
+ 	font-size: 90%;
+ 	text-align: center;
+ }
+
+#current-problem {
+ 	font-size: 200%;
+ }
+
+#next-button {
+ 	width: 80vw;
+	max-width: 800px;
+	margin: 30px auto;
+ }
+
+#next-button a {
+ 	float: right;
+ 	background-color: #63BBFF;
+ 	border-radius: 999px;
+ 	border: #63BBFF 3px solid;
+ 	padding: 10px 20px;
+ 	font-weight: 700;
+ 	font-size: 90%;
+ 	letter-spacing: 2px;
+ 	opacity:0;
+ }
+
+#next-button a.display {
+ 	cursor: pointer;
+}
+
+#next-button a:hover {
+ 	background-color: white;
+ 	transition-duration: 200ms;
+}
