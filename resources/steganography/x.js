@@ -44,12 +44,7 @@ var comparisonBeginTime = -1;
 
 $(function (){
 
-	// $("#introduction input").keypress(function () {
-	// 	if ($("#introduction input").val().length > 4) {
-	// 		$('#introduction .next-button a').addClass('display');
-	// 		$('#introduction p').removeClass('hidden');
-	// 	}
-	// });
+	$('.hidden-mail').html('maxion');
 
 	$('#introduction .next-button a').click((e) => {
 		log.MTurkID = $("#introduction input").val();
