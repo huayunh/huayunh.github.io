@@ -10,8 +10,8 @@ const startingTime = new Date();
 var param = getUrlVars();
 if (param) {
 
-	if (param['random']) { var imageOrderRandomized = true; }
-	else { var imageOrderRandomized = false; }
+	if (param['sequential']) { var imageOrderRandomized = false; }
+	else { var imageOrderRandomized = true; }
 
 	if (param['orderMatters']) { var imagePairOrderingMatters = true; }
 	else { var imagePairOrderingMatters = false; }
@@ -44,6 +44,15 @@ var comparisonBeginTime = -1;
 
 $(function (){
 
+	// preload
+
+	for (var i = 0; i < numberOfPicturesInTheCategory; i++) {
+		$('#preload').css('background-image', 'url(images/"' + category + '/' + (i+1) + '.jpg")');
+	}
+	$('#preload').remove();
+
+	// introduction page
+
 	$('.hidden-mail').html('maxion');
 
 	$('#introduction .next-button a').click((e) => {
@@ -52,6 +61,8 @@ $(function (){
 		$('#main-test').removeClass('hidden');
 		comparisonBeginTime = e.timeStamp;
 	});
+
+	// main test
 
 	$('#total-problem').html("" + totalQuestions);
 
@@ -75,10 +86,6 @@ $(function (){
 		value: currentQuestion + 1
 	})
 	.progressbar( "enable" );
-
-	// preload every image
-
-	// update
 
 	$('#main-test .next-button a').click( (e) => {
 		if (!$('.next-button a').hasClass('display')) { return; }
