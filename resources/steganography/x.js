@@ -115,7 +115,7 @@ $(function (){
 	});
 
 	function updateImages(){
-		$('#main-test.next-button a').removeClass('display');
+		$('#main-test .next-button a').removeClass('display');
 		$('#progressbar').progressbar("option", "value", currentQuestion);
 		$('#image1').css('background-image', 'url("images/' + category + '/' + (pairs[currentQuestion][0]+1) + '.jpg")')
 		$('#image2').css('background-image', 'url("images/' + category + '/' + (pairs[currentQuestion][1]+1) + '.jpg")')

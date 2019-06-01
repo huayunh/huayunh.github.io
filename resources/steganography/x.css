@@ -101,15 +101,18 @@ h2 a {
  }
 
 .next-button a {
- 	float: right;
+ 	/*float: right;*/
  	background-color: #63BBFF;
  	border-radius: 999px;
  	border: #63BBFF 3px solid;
- 	padding: 10px 20px;
+ 	padding: 10px 0;
  	font-weight: 700;
  	font-size: 90%;
  	letter-spacing: 2px;
  	opacity:0;
+ 	width: 100%;
+ 	text-align: center;
+ 	display: block;
 }
 
 .next-button a.display {
@@ -123,7 +126,6 @@ h2 a {
 
 #introduction p {
 	font-size: 80%;
-	margin-top: 90px;
 	clear: both;
 	text-align: right;
 }
