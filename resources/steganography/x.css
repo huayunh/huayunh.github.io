@@ -23,7 +23,14 @@ h2 a {
 }
 
 #introduction input {
-	background: none;
+    border-radius: 10px;
+    border: #999 1px solid;
+    padding: 10px 20px;
+    font-size: 100%;
+}
+
+#introduction input:hover {
+	border-color: #63BBFF;
 }
 
 .images {

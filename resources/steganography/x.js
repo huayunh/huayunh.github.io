@@ -3,7 +3,7 @@
 const categories = [
 'bricks',
 ]
-const numberOfPicturesInTheCategory = 3;
+const numberOfPicturesInTheCategory = 12;
 const startingTime = new Date();
 
 // parameters
@@ -44,12 +44,12 @@ var comparisonBeginTime = -1;
 
 $(function (){
 
-	$("#introduction input").keypress(function () {
-		if ($("#introduction input").val().length > 4) {
-			$('#introduction .next-button a').addClass('display');
-			$('#introduction p').removeClass('hidden');
-		}
-	});
+	// $("#introduction input").keypress(function () {
+	// 	if ($("#introduction input").val().length > 4) {
+	// 		$('#introduction .next-button a').addClass('display');
+	// 		$('#introduction p').removeClass('hidden');
+	// 	}
+	// });
 
 	$('#introduction .next-button a').click((e) => {
 		log.MTurkID = $("#introduction input").val();
@@ -80,16 +80,6 @@ $(function (){
 		value: currentQuestion + 1
 	})
 	.progressbar( "enable" );
-
-	$('input:text')
-		.button()
-		.css({
-		      'font' : 'inherit',
-		     'color' : 'inherit',
-		'text-align' : 'left',
-		   'outline' : 'none',
-		    'cursor' : 'text'
-		});
 
 	// preload every image
 
