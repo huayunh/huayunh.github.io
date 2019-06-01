@@ -9,8 +9,21 @@ h2 {
 	text-align: center;
 }
 
+h2 a {
+	color: #777;
+}
+
 .hidden {
 	display: none;
+}
+
+#introduction {
+	max-width: 800px;
+	margin: 20px auto;
+}
+
+#introduction input {
+	background: none;
 }
 
 .images {
@@ -28,6 +41,18 @@ h2 {
 	display: inline-block;
 	background-size: cover;
 	margin: 0;
+	position: relative;
+}
+
+.images div span {
+	display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px black;
+    font-size: 200%;
+    color: white;
 }
 
 .images div:hover {
@@ -68,13 +93,14 @@ h2 {
  	font-size: 200%;
  }
 
-#next-button {
+.next-button {
  	width: 80vw;
 	max-width: 800px;
 	margin: 30px auto;
+	clear: both;
  }
 
-#next-button a {
+.next-button a {
  	float: right;
  	background-color: #63BBFF;
  	border-radius: 999px;
@@ -84,13 +110,25 @@ h2 {
  	font-size: 90%;
  	letter-spacing: 2px;
  	opacity:0;
- }
+}
 
-#next-button a.display {
+.next-button a.display {
  	cursor: pointer;
 }
 
-#next-button a:hover {
+.next-button a:hover {
  	background-color: white;
  	transition-duration: 200ms;
+}
+
+#introduction p {
+	font-size: 80%;
+	margin-top: 90px;
+	clear: both;
+	text-align: right;
+}
+
+#survey iframe {
+	margin: 0 auto;
+	display: block;
 }
