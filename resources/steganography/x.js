@@ -56,10 +56,14 @@ $(function (){
 	$('.hidden-mail').html('maxion');
 
 	$('#introduction .next-button a').click((e) => {
-		log.MTurkID = $("#introduction input").val();
-		$('#introduction').addClass('hidden');
-		$('#main-test').removeClass('hidden');
-		comparisonBeginTime = e.timeStamp;
+		if (/^[a-zA-Z0-9]+$/i.test($("#introduction input").val())) {
+			log.MTurkID = $("#introduction input").val();
+			$('#introduction').addClass('hidden');
+			$('#main-test').removeClass('hidden');
+			comparisonBeginTime = e.timeStamp;
+		} else {
+			$("#introduction input").css('border-color', '#e96161');
+		}
 	});
 
 	// main test
