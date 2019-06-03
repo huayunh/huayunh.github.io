@@ -63,12 +63,12 @@ h2 a {
 }
 
 .images div:hover {
-	box-shadow: inset 0 0 0 5px #63BBFF99;
+	box-shadow: inset 0 0 0 15px #63BBFF99;
 	transition-duration: 200ms;
 }
 
 .images div.selected {
-	box-shadow: inset 0 0 0 5px #63BBFF;
+	box-shadow: inset 0 0 0 15px #63BBFF;
 }
 
 .ui-widget-header {

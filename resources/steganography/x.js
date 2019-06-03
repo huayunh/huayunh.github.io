@@ -88,7 +88,7 @@ $(function (){
 	.progressbar( "enable" );
 
 	$('#main-test .next-button a').click( (e) => {
-		if (!$('.next-button a').hasClass('display')) { return; }
+		if (!$('#main-test .next-button a').hasClass('display')) { return; }
 		log.selection.push(pairs[currentQuestion][currentSelection]);
 		log.reactionTime.push(e.timeStamp - comparisonBeginTime);
 
