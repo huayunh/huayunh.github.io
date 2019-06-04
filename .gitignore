@@ -1,0 +1,4 @@
+resources/steganography/credentials.json
+resources/steganography/node_modules
+resources/steganography/package-lock.json
+resources/steganography/package.json
