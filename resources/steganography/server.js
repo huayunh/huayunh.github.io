@@ -27,6 +27,7 @@ app.post('/subjectFinished', function (req, res) {
         		console.log(err);
         	}
         });
+        res.end();
     });
 })
 
