@@ -3,8 +3,10 @@
 const categories = [
 'bricks',
 ]
-const numberOfPicturesInTheCategory = 12;
+const numberOfPicturesInTheCategory = 2;
 const startingTime = new Date();
+
+const serverLink = "127.0.0.1:8000";
 
 // parameters
 var param = getUrlVars();
@@ -104,6 +106,11 @@ $(function (){
 			if (debug) {
 				downloadObjectAsJson(log, category + "-" + log.startTime);
 			}
+
+			$.post("/subjectFinished", JSON.stringify(log), function( data ) {
+				console.log(data);
+			});
+			
 		} else {
 			updateImages();
 			comparisonBeginTime = e.timeStamp;
