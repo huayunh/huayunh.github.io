@@ -2,34 +2,49 @@
 <html>
 <head>
 	<title>Compare Complexity</title>
+	<!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
+	<link rel="icon" href="https://forensicstats.org/wp-content/uploads/2017/01/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" href="https://forensicstats.org/wp-content/uploads/2017/01/favicon-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon-precomposed" href="https://forensicstats.org/wp-content/uploads/2017/01/favicon-180x180.png">
 
+	<!-- styles -->
 	<link rel="stylesheet" type="text/css" href="x.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+	<!-- js -->
 	<script
 	src="https://code.jquery.com/jquery-1.12.4.min.js"
 	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
 	crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.1.0/jquery.browser.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/redmond/jquery-ui.css">
 	<script type="text/javascript" src="x.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/png" href="favicon.png" />
+
 
 </head>
 <body>
 	<div id="mobile-warning">
 		This study is intended to be completed on a computer or a tablet. Please use a larger screen.
 	</div>
-	<div id="introduction">
+	<div class="hidden" id="introduction">
 		<img src="https://forensicstats.org/wp-content/uploads/2017/01/csafe-logo-90.png">
-		<h2>This is a study blah blah blah. It is about blah blah blah. You must be at least 18 and blah blah to complete this study. At the end of the study you will be prompt with a survey. If you have more questions, feel free to email us at <span class="hidden-mail"></span>@cs.cmu.edu.</h2>
+		<h1>Qualifications</h1>
+		<h2 class="instructions">You must be at least 18 years old and not color-blind to be qualified for this study. </h2>
+		<h1>Task</h1>
+		<h2 class="instructions">Your task is to decide, between two given images, which one is more complex. Throughout the HIT you will be asked to compare among <span class="total-questions">50</span> pairs of images. Two images will be presented at one time, and you will click on the image that you consider to be more complex. There is no particular definition of complexity, other than what your own senses tell you. After you are finished with the comparisons, you will go back to the MTurk page to complete a brief set of questions. </h2>
+		<h1>What we record</h1>
+		<h2 class="instructions">Aside from your MTurk Worker ID, we record the choices you made between the pairs of images, the time it takes for you to make the choice, and your user agent. We also record the answers you provide to the questions at the end of the study.</h2>
+		<h1>Compensation</h1>
+		<h2 class="instructions">While there is no right or wrong answer to which image is more complex, the answers you provide must be reasonably consistent, rather than your appearing to have "gamed" the task; for example by having clicked on all of the left-hand images.  If we determine that you have gamed the task, or circumvented reasonable behavior, you will not be compensated for your work.  We will accept or reject your work within 30 days, and upon our acceptance, you will receive a $1.00 compensation.</h2>
+		<h2 class="instructions">If you have more questions, feel free to email us at <span class="hidden-mail"></span>@cs.cmu.edu.</h2>
 		<hr>
-		<h2 style="text-align: left;">May I have your Mechanical Turk Worker ID?</h2>
+		<h2 class="instructions">May I have your Mechanical Turk Worker ID?</h2>
 		<input type="text" name="MTurkID" /><br />
 		<div class="next-button">
 			<a class="display">NEXT ></a>
 		</div>
-		<p>By clicking next, I acknowledge that I have read and agreed the blah above.</p>
+		<p>By clicking next, I acknowledge that I have read and agree with the statement above.</p>
 	</div>
 
 	<div id="main-test" class="hidden">
@@ -53,8 +68,7 @@
  -->	<h2>Thank you! Please now complete the survey in the MTurk page.</h2>
 	</div>
 
-	<div class="hidden" id="preload"></div>
+	<div id="preload"></div>
 
-	<div class ></div>
 </body>
 </html>

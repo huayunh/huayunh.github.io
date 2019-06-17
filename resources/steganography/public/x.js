@@ -2,11 +2,12 @@
 // constants
 const categories = [
 'bricks',
+'bokeh',
+'abstract'
 ]
-const numberOfPicturesInTheCategory = 2;
+const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
-
-const serverLink = "127.0.0.1:8000";
+const backgroundPlaceHolder = ", url('loading.svg')";
 
 // parameters
 var param = getUrlVars();
@@ -14,6 +15,9 @@ if (param) {
 
 	if (param['sequential']) { var imageOrderRandomized = false; }
 	else { var imageOrderRandomized = true; }
+
+	if (param['nopractice']) { var hasPractice = false; }
+	else { var hasPractice = true; }
 
 	if (param['orderMatters']) { var imagePairOrderingMatters = true; }
 	else { var imagePairOrderingMatters = false; }
@@ -28,6 +32,18 @@ if (param) {
 }
 
 var pairs = generatePermutationSequence(numberOfPicturesInTheCategory);
+
+if (hasPractice) {
+
+	var practicePairs = getRandomSubarray(pairs.slice(1), 5);
+	for (var i = 0; i < practicePairs.length; i++) {
+		let temp0 = practicePairs[i][0];
+		let temp1 = practicePairs[i][1];
+		practicePairs[i] = [temp1, temp0];
+	}
+	pairs = practicePairs.concat(pairs);
+
+}
 
 var currentQuestion = 0;
 var totalQuestions = pairs.length;
@@ -46,12 +62,16 @@ var comparisonBeginTime = -1;
 
 $(function (){
 
+	$('total-questions').html(totalQuestions);
+
 	// preload
 
 	for (var i = 0; i < numberOfPicturesInTheCategory; i++) {
-		$('#preload').css('background-image', 'url(images/"' + category + '/' + (i+1) + '.jpg")');
+		$('#preload').append('<div id="preload' + i +'"></div>')
+		$('#preload'+i).css('background-image', 'url("images/' + category + '/' + (i+1) + '.jpg")');
 	}
-	$('#preload').remove();
+	// $('#preload').addClass('hidden');
+	$('#introduction').removeClass('hidden');
 
 	// introduction page
 
@@ -120,8 +140,14 @@ $(function (){
 	function updateImages(){
 		$('#main-test .next-button a').removeClass('display');
 		$('#progressbar').progressbar("option", "value", currentQuestion);
-		$('#image1').css('background-image', 'url("images/' + category + '/' + (pairs[currentQuestion][0]+1) + '.jpg")')
-		$('#image2').css('background-image', 'url("images/' + category + '/' + (pairs[currentQuestion][1]+1) + '.jpg")')
+		$('#image1')
+			.css('background-image', 'url("images/'
+				+ category + '/' + (pairs[currentQuestion][0]+1) + '.jpg")' 
+				+ backgroundPlaceHolder);
+		$('#image2')
+			.css('background-image', 'url("images/'  
+				+ category + '/' + (pairs[currentQuestion][1]+1) + '.jpg")' 
+				+ backgroundPlaceHolder);
 		$('#current-problem').html(currentQuestion + 1);
 		$('.images div').removeClass('selected');
 
@@ -206,4 +232,19 @@ function downloadObjectAsJson(exportObj, exportName){
     document.body.appendChild(downloadAnchorNode); // required for firefox
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
+}
+
+// https://stackoverflow.com/questions/11935175/sampling-a-random-subset-from-an-array
+function getRandomSubarray(arr, size) {
+	if (arr.length < size) {
+		return [];
+	}
+    var shuffled = arr.slice(0), i = arr.length, temp, index;
+    while (i--) {
+        index = Math.floor((i + 1) * Math.random());
+        temp = shuffled[index];
+        shuffled[index] = shuffled[i];
+        shuffled[i] = temp;
+    }
+    return shuffled.slice(0, size);
 }

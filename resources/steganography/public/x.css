@@ -3,6 +3,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+	font-size: 150%;
+}
+
 h2 {
 	font-weight: 100;
 	font-size: 120%;
@@ -13,13 +17,17 @@ h2 a {
 	color: #777;
 }
 
+h2.instructions {
+	text-align: left;
+}
+
 .hidden {
 	display: none;
 }
 
 #introduction {
 	max-width: 800px;
-	margin: 20px auto;
+	margin: 20px auto 50px;
 }
 
 #introduction input {
@@ -36,8 +44,8 @@ h2 a {
 .images {
 	width: 80vw;
 	max-width: 800px;
-	height: 30vw;
-	max-height: 300px;
+	height: 26.8vw;
+	max-height: 268px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -46,7 +54,8 @@ h2 a {
 	width: 48%;
 	height: 96%;
 	display: inline-block;
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 	margin: 0;
 	position: relative;
 }
@@ -64,7 +73,7 @@ h2 a {
 
 .images div:hover {
 	box-shadow: inset 0 0 0 15px #63BBFF99;
-	transition-duration: 200ms;
+	transition: 200ms ease-out;
 }
 
 .images div.selected {
@@ -84,7 +93,7 @@ h2 a {
 	float: right;
 }
 
-#progressbar {
+#progressbar, #preload-progressbar {
     height:10px;
     width: 300px;
     margin: 30px auto 20px;
@@ -144,6 +153,10 @@ h2 a {
 
 #mobile-warning {
 	display: none;
+}
+
+#preload {
+	opacity: 0;
 }
 
 /* desktop */

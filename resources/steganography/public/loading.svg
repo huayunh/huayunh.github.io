@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="90px" viewBox="0 0 120 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>loading</title>
+    <desc>Created with Sketch.</desc>
+    <g id="loading" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#DADADA" x="0" y="0" width="120" height="90"></rect>
+        <text id="loading…" font-family="Roboto-Regular, Roboto" font-size="23" font-weight="normal" fill="#595959">
+            <tspan x="17.1289062" y="53">loading…</tspan>
+        </text>
+    </g>
+</svg>
