@@ -29,7 +29,7 @@ After downloading the package and unzip it into, say, a directory called `stegan
   - x.css
   - x.js
 
- `server.js` is the server you would initiate. It is written using `node.js`. `README.md` is this instruction you are reading right now. All the client-side assets & webpages are stored inside the `public` directory. 
+ `server.js` is the server you would initiate. It is written using Node.js. `README.md` is this instruction you are reading right now. All the client-side assets & webpages are stored inside the `public` directory. 
 
 ## Set up the whole thing
 
@@ -43,7 +43,7 @@ Once you are done, open your command line / terminal and navigate to your `stega
 $ cd steganography
 ```
 
-We now need to install `express.js` onto your machine. Go to [expresses.com](https://expressjs.com/en/starter/installing.html) and follow the instruction.
+We now need to install `express.js` onto your machine. Go to [expressjs.com](https://expressjs.com/en/starter/installing.html) and follow the instruction.
 
 Now start the server: 
 
