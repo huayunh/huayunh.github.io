@@ -69,6 +69,16 @@ This step configures your router by forwarding the port to your local machine. W
 
 **Then save / activate the configuration.** Your should now be able to visit the website at `http://{your ip address}/compare.html?category=2` where `{your ip address}` is your broadband IP address (visit [whatismyipaddress.com](whatismyipaddress.com), for example, to find out your IP address).
 
+## URL parameters
+
+You can control parameters of the web app by altering the URL given to the Turkers. ([How to change parameters?](https://www.bigleap.com/blog/what-are-url-parameters/]))
+
+- `sequential=1` makes the order of the image to be sequential and fixed. The images will be presented in the order `[[0,1],[0,2],[0,3], ...,[0,9],[1,2],[1,3],...,[8,9]]`. By default, the order of images are randomized.
+- `orderMatters=1` is saying that the orders of the image pair matters, and both should be present to the subject. That is, both "1.jpg on the left, 2.jpg on the right" and "2.jpg on the left, 1.jpg on the right" will be present. When `orderMatters=1` is present, there would be no practice and `practice` parameter is ignored. By default, orderMatters is turned off and only `[0,1]` or `[1,0]` will be used (but not both).
+- `category` specifies which category is used. As for now there are 3 categories in total: `['bricks','bokeh','abstract']`. Setting `category=1`, for example, will give us pictures from the `bokeh` category. By default, the script will choose an arbitrary category first, and serve all the images from that category.
+- `debug=1` will enable the debug mode, which will superimpose a label of the image (like, having "1" on top of "1.jpg", "9" on "9.jpg"). When the user finishes the whole session, a window will be prompt to download their log file locally (in addition to the log file being stored on the server.)
+- `practice` specify the number of practices we want. When `orderMatters` is not set, we would have 10*9/2=45 pairs of images to compare. However, because (1) the Turker might be unfamiliar with the form experiment and need time to adjust and (2) we need to verify whether the Turker is really doing what they are told to do or is just gaming the system, we would want to have a few practice comparisons at the beginning of the 45 pairs. By default, we would have 5 practice comparisons, meaning that we would have 5 + 45 = 50 comparisons in total. The 5 pracitice comparisons are randomly chosen from the 45 comparisons but with order swapped, meaning that if we have `[…,[4,1], …, [2,4], …, [7,8], …, [8,5], …, [2,1], …]` in the 45 comparisons, then we might have `[5,8], [2,4], [4,1], [1,2], [7,8]` as the 5 practice sessions. To turn the practice off, simply set `practice=0`.
+
 ## A walkthrough from the subject's perspective
 
 Note the whole thing does not render properly on IE/Edge due to JavaScript incompatibility. We've tested the whole thing on Safari & Chrome & Firefox tho. 
@@ -82,16 +92,6 @@ Inside the web app, the Turker would be first presented with some instructions, 
 (Perhaps a video would explain this better)
 
 After the Turker is finished with all the 50 comparisons, the Turker is told to go back to the survey page at Amazon Mechanical Turk Worker site.
-
-## URL parameters
-
-You can control parameters of the web app by altering the URL given to the Turkers. ([How to change parameters?](https://www.bigleap.com/blog/what-are-url-parameters/]))
-
-- `sequential=1` makes the order of the image to be sequential and fixed. The images will be presented in the order `[[0,1],[0,2],[0,3], ...,[0,9],[1,2],[1,3],...,[8,9]]`. By default, the order of images are randomized.
-- `orderMatters=1` is saying that the orders of the image pair matters, and both should be present to the subject. That is, both "1.jpg on the left, 2.jpg on the right" and "2.jpg on the left, 1.jpg on the right" will be present. When `orderMatters=1` is present, there would be no practice and `practice` parameter is ignored. By default, orderMatters is turned off and only `[0,1]` or `[1,0]` will be used (but not both).
-- `category` specifies which category is used. As for now there are 3 categories in total: `['bricks','bokeh','abstract']`. Setting `category=1`, for example, will give us pictures from the `bokeh` category. By default, the script will choose an arbitrary category first, and serve all the images from that category.
-- `debug=1` will enable the debug mode, which will superimpose a label of the image (like, having "1" on top of "1.jpg", "9" on "9.jpg"). When the user finishes the whole session, a window will be prompt to download their log file locally (in addition to the log file being stored on the server.)
-- `practice` specify the number of practices we want. When `orderMatters` is not set, we would have 10*9/2=45 pairs of images to compare. However, because (1) the Turker might be unfamiliar with the form experiment and need time to adjust and (2) we need to verify whether the Turker is really doing what they are told to do or is just gaming the system, we would want to have a few practice comparisons at the beginning of the 45 pairs. By default, we would have 5 practice comparisons, meaning that we would have 5 + 45 = 50 comparisons in total. The 5 pracitice comparisons are randomly chosen from the 45 comparisons but with order swapped, meaning that if we have `[…,[4,1], …, [2,4], …, [7,8], …, [8,5], …, [2,1], …]` in the 45 comparisons, then we might have `[5,8], [2,4], [4,1], [1,2], [7,8]` as the 5 practice sessions. To turn the practice off, simply set `practice=0`.
 
 ## Log file
 
