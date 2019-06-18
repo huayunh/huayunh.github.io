@@ -1,4 +1,4 @@
-#Documentation for the steganography project
+# Documentation for the steganography project
 
 ## Premise
 
@@ -30,7 +30,7 @@ After downloading the package and unzip it into, say, a directory called `stegan
 
 ## Set up the whole thing
 
-###Run it locally...
+### Run it locally...
 
 Go to [nodejs.org](nodejs.org) and install Node.js onto your machine.
 
@@ -50,7 +50,7 @@ $ node server.js
 
 Your server is running! Try visiting [http://0.0.0.0:8080/compare.html](http://0.0.0.0:8080/compare.html) and see the magic yourself. 
 
-###Serve it on the internet...
+### Serve it on the internet...
 
 This step configures your router by forwarding the port to your local machine. We are using a Verizon router (model MI424WR) in our experiment; depending on your router manufacturer, you might need to do it slightly differently.
 
