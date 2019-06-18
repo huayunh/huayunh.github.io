@@ -16,9 +16,6 @@ if (param) {
 	if (param['sequential']) { var imageOrderRandomized = false; }
 	else { var imageOrderRandomized = true; }
 
-	if (param['nopractice']) { var hasPractice = false; }
-	else { var hasPractice = true; }
-
 	if (param['orderMatters']) { var imagePairOrderingMatters = true; }
 	else { var imagePairOrderingMatters = false; }
 
@@ -29,13 +26,17 @@ if (param) {
 	if (param['debug']) { var debug = true; }
 	else { var debug = false; }
 
+	if (param['practice']) { var numberOfPracticePairs = parseInt(param['practice']); }
+	else { var numberOfPracticePairs = 5; }
+
+
 }
 
 var pairs = generatePermutationSequence(numberOfPicturesInTheCategory);
 
-if (hasPractice) {
+if ((numberOfPracticePairs > 0) && (!imagePairOrderingMatters)) {
 
-	var practicePairs = getRandomSubarray(pairs.slice(1), 5);
+	var practicePairs = getRandomSubarray(pairs.slice(1), numberOfPracticePairs);
 	for (var i = 0; i < practicePairs.length; i++) {
 		let temp0 = practicePairs[i][0];
 		let temp1 = practicePairs[i][1];
@@ -178,7 +179,7 @@ function generatePermutationSequence(n) {
 	var generatedList = [];
 	for (var i = 0; i < n; i++) {
 		for (var j = i + 1; j < n; j++) {
-			if ((!imagePairOrderingMatters) && imageOrderRandomized) {
+			if (!imagePairOrderingMatters) {
 				if (Math.random() > 0.5) { generatedList.push([i,j]); }
 				else { generatedList.push([j,i]); }
 			} else {
