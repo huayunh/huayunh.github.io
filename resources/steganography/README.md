@@ -15,6 +15,9 @@ After downloading the package and unzip it into, say, a directory called `stegan
     - abstract\
       - 1.jpg
       - 2.jpg
+      - 3.jpg
+      - ...
+      - 10.jpg
     - bokeh\
       - ...
     - bricks\
