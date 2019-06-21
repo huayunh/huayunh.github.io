@@ -1,15 +1,16 @@
 
 // constants
-const categories = [
-'bricks',
-'bokeh',
-'abstract'
-]
+const categories = {
+'qokjviw':'bricks',
+'uvbslqp':'bokeh',
+'nvskdfp':'abstract',
+};
 const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
 const backgroundPlaceHolder = ", url('loading.svg')";
 
 // parameters
+var categoryKeys = Object.keys(categories);
 var param = getUrlVars();
 if (param) {
 
@@ -19,14 +20,40 @@ if (param) {
 	if (param['orderMatters']) { var imagePairOrderingMatters = true; }
 	else { var imagePairOrderingMatters = false; }
 
-	if (param['category']) { var category = parseInt(param['category']); }
-	else { var category = Math.floor(Math.random()*categories.length); }
-	category = categories[category];
+	if (param['category']) {
+		var category = parseInt(param['category']);
+
+		// if the category passed in is not an integer
+		if (isNaN(category)) {
+
+			category = categories[param['category']];
+
+			// if the category passed in does not exist in categories
+			if (category === undefined) {
+				// pick one at random
+				var category = Math.floor(Math.random()*categoryKeys.length); 
+				category = categories[categoryKeys[category]];
+			}
+		}
+
+		// passed in an integer category
+		else {
+			category = categories[categoryKeys[category]];
+		}
+	}
+	else { 
+		// alert("No category provided. Do not modify the URL.");
+		var category = Math.floor(Math.random()*categoryKeys.length); 
+		category = categories[categoryKeys[category]];
+	}
 
 	if (param['debug']) { var debug = true; }
 	else { var debug = false; }
 
-	if (param['practice']) { var numberOfPracticePairs = parseInt(param['practice']); }
+	if (param['practice']) { 
+		var numberOfPracticePairs = parseInt(param['practice']); 
+		if (numberOfPracticePairs < 0) {numberOfPracticePairs=0;}
+	}
 	else { var numberOfPracticePairs = 5; }
 
 
