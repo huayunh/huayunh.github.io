@@ -4,6 +4,8 @@ const categories = {
 'qokjviw':'bricks',
 'uvbslqp':'bokeh',
 'nvskdfp':'abstract',
+'whalsvm':'pattern',
+'qupxsaz':'fullframeplants',
 };
 const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
