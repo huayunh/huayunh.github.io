@@ -66,11 +66,19 @@ Now while you are inside the `steganography` directory, start the server:
 $ node server.js
 ```
 
-Your server is running! Try visiting [http://0.0.0.0:8080/compare.html](http://0.0.0.0:8080/compare.html) and see the magic yourself. If your machine complains about how Node.js is trying to break through your firewall, allow the access.
+Your server is running! Try visiting [localhost:8080/compare.html](localhost:8080/compare.html) and see the magic yourself. If your machine complains about how Node.js is trying to break through your firewall, allow the access.
 
 ### Serve it on the internet...
 
-Now leave the server running in your command line window as it is. This step configures your router by forwarding the port to your local machine. We are using a Verizon router (model MI424WR) in our experiment; depending on your router manufacturer, you might need to do it slightly differently.
+Now leave the server running in your command line window as it is. 
+
+####Static IP
+
+If your machine is plugged into a wall and has a static IP, then you pretty much there! Just figure out what your IP address is (see the section below) and you are finished!
+
+#### If your machine is connected to the internet via a router
+
+This step configures your router by forwarding the port to your local machine. We are using a Verizon router (model MI424WR) in our experiment; depending on your router manufacturer, you might need to do it slightly differently.
 
 **Login to your router.** You should be able to find your router's local ip address via your own computer's network settings. In our case, it's `192.168.1.1`.
 
@@ -82,7 +90,9 @@ Now leave the server running in your command line window as it is. This step con
 
 "Forward to port" -> Specify. Enter `8080`, because that's the port our server is listening to. 
 
-**Then save / activate the configuration.** If you still have the Node.js server running, you should now be able to visit the website at `http://{your ip address}/compare.html` where `{your ip address}` is your broadband IP address (visit [whatismyipaddress.com](whatismyipaddress.com), for example, to find out your broadband IP address). 
+#### Find your IP address and access your application anywhere on the internet
+
+You should now be able to visit the website at `http://{your ip address}/compare.html` where `{your ip address}` is your broadband IP address (visit [whatismyipaddress.com](whatismyipaddress.com), for example, to find out your broadband IP address). 
 
 ## URL parameters
 
