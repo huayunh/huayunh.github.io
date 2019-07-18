@@ -6,6 +6,7 @@ const categories = {
 'nvskdfp':'abstract',
 'whalsvm':'pattern',
 'qupxsaz':'fullframeplants',
+'ajlbwwl':'treeBark',
 };
 const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
