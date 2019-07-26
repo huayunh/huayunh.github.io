@@ -7,6 +7,7 @@ const categories = {
 'whalsvm':'pattern',
 'qupxsaz':'fullframeplants',
 'ajlbwwl':'treeBark',
+'pqkacle':'carnival',
 };
 const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
