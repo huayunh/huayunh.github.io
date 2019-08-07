@@ -8,6 +8,9 @@ const categories = {
 'qupxsaz':'fullframeplants',
 'ajlbwwl':'treeBark',
 'pqkacle':'carnival',
+'ganquan':'clouds',
+'wtstshr':'bokeh2',
+'nvimask':'textiles',
 };
 const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
@@ -25,6 +28,7 @@ if (param) {
 	else { var imagePairOrderingMatters = false; }
 
 	if (param['category']) {
+
 		var category = parseInt(param['category']);
 
 		// if the category passed in is not an integer
@@ -41,8 +45,9 @@ if (param) {
 		}
 
 		// passed in an integer category
+		// note this is one-indexed (to be consistent with Roy's file naming scheme)
 		else {
-			category = categories[categoryKeys[category]];
+			category = categories[categoryKeys[category-1]];
 		}
 	}
 	else { 
