@@ -63,8 +63,7 @@ if (param) {
 		var numberOfPracticePairs = parseInt(param['practice']); 
 		if (numberOfPracticePairs < 0) {numberOfPracticePairs=0;}
 	}
-	else { var numberOfPracticePairs = 5; }
-
+	else { var numberOfPracticePairs = 10; }
 
 }
 
@@ -93,6 +92,8 @@ var log = {
 	reactionTime: [],
 	category: category,
 	userAgent: $.browser,
+	practicePair: numberOfPracticePairs,
+	numberOfImagesInTheCategory: 10,
 }
 
 var comparisonBeginTime = -1;

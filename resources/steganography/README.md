@@ -130,6 +130,7 @@ Our data is stored as JSON files. Inside the JSON file, there are a few fields:
 * `reactionTime` records how long it takes (in milliseconds) a subject from seeing both images to click on the "next" button in the web page.
 * `category` is the category name of this set of images. 
 * `userAgent` records down subjects' browser & OS info.
+* `practicePair` records how many practice sessions the user has. Should be the same as `practice` parameter specified in the URL parameters section above. 
 * `MTurkID` is the Amazon Mechanical Turk ID reported by the subject at the beginning of the study session.
 
 ## License
