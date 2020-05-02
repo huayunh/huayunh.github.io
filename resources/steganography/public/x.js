@@ -11,6 +11,7 @@ const categories = {
 'ganquan':'clouds',
 'wtstshr':'bokeh2',
 'nvimask':'textiles',
+'plytwir':'officeSupply',
 };
 const numberOfPicturesInTheCategory = 10;
 const startingTime = new Date();
@@ -89,7 +90,7 @@ var log = {
 	startTime: startingTime.getTime(),
 	pairs: pairs,
 	selection: [],
-	reactionTime: [],
+	// reactionTime: [],
 	category: category,
 	userAgent: $.browser,
 	practicePair: numberOfPracticePairs,
@@ -108,21 +109,19 @@ $(function (){
 		$('#preload').append('<div id="preload' + i +'"></div>')
 		$('#preload'+i).css('background-image', 'url("images/' + category + '/' + (i+1) + '.jpg")');
 	}
-	// $('#preload').addClass('hidden');
 	$('#introduction').removeClass('hidden');
 
 	// introduction page
 
-	$('.hidden-mail').html('maxion');
-
 	$('#introduction .next-button a').click((e) => {
-		if (/^[a-zA-Z0-9]+$/i.test($("#introduction input").val())) {
+		if (/^[A-Z0-9]+$/i.test($("#introduction input").val())) {
 			log.MTurkID = $("#introduction input").val();
 			$('#introduction').addClass('hidden');
 			$('#main-test').removeClass('hidden');
 			comparisonBeginTime = e.timeStamp;
 		} else {
 			$("#introduction input").css('border-color', '#e96161');
+			$('#error-message').removeClass('hidden');
 		}
 	});
 
@@ -154,7 +153,7 @@ $(function (){
 	$('#main-test .next-button a').click( (e) => {
 		if (!$('#main-test .next-button a').hasClass('display')) { return; }
 		log.selection.push(pairs[currentQuestion][currentSelection]);
-		log.reactionTime.push(e.timeStamp - comparisonBeginTime);
+		// log.reactionTime.push(e.timeStamp - comparisonBeginTime);
 
 		currentSelection = -1;
 		currentQuestion += 1;
@@ -167,6 +166,15 @@ $(function (){
 
 			$.post("/subjectFinished", JSON.stringify(log), function( data ) {
 				console.log(data);
+			}).fail(function() {
+				// try again, dang it
+
+				setTimeout(() =>{
+					$.post("/subjectFinished", JSON.stringify(log), function( data2 ) {
+						console.log(data2);
+					})
+				}, 2000);
+		    	
 			});
 			
 		} else {
@@ -285,4 +293,13 @@ function getRandomSubarray(arr, size) {
         shuffled[i] = temp;
     }
     return shuffled.slice(0, size);
+}
+
+// for debug purpose only
+function cheat() {
+	// jump to the last question
+	currentQuestion = pairs.length - 1;
+
+	// HUGE log file to create the chance of racing condition
+	log.reactionTime = new Array(10000).fill(0)
 }

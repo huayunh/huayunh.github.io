@@ -11,29 +11,48 @@ const port = 8080;
 
 var app = express();
 
+var filePath = __dirname + '/log/';
+
 app.use(express.static('public'))
 
 app.post('/subjectFinished', function (req, res) {
 
-	var body = '';
-    filePath = __dirname + '/log/';
+    var body = '';
     if (!fs.existsSync(filePath)) {
         fs.mkdirSync(filePath);
     }
+    var chunks = []
 
-    var receivedTime = new Date();
     req.on('data', function(data) {
-        body += data;
-        data = JSON.parse(data);
-        filePath += data.category + '-' + receivedTime.getTime() + '.json';
-    });
+        chunks.push(data);
 
-    req.on('end', function (){
-        fs.writeFile(filePath, body, 'utf8', (err) => {
-        	if (err) {
-        		console.log(err);
-        	}
-        });
+    }).on('end', function (){
+        let data   = Buffer.concat(chunks).toString();
+        let saveToPath = filePath + (new Date()).getTime();
+
+        // in case two files come in at the same time
+        if (!fs.existsSync(saveToPath + '.json')) {
+            fs.writeFile(
+                saveToPath + '.json', // file path
+                data, 
+                'utf8', 
+                (err) => {
+                    if (err) {
+                        console.log(err);
+                    }
+            });
+        } else {
+            fs.writeFile(
+                saveToPath + ' 2.json',
+                data, 
+                'utf8', 
+                (err) => {
+                    if (err) {
+                        console.log(err);
+                    }
+            });
+        }
+        
         res.end();
     });
 })

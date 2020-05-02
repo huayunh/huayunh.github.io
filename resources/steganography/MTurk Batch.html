@@ -1,0 +1,177 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<style>
+     .block {
+         display: block;
+         background: #fafafa;
+         width: 100%;
+         padding: 10px 20px;
+         margin: 10px 0;
+         box-sizing: border-box;
+         border-left: 5px solid #fafafa;
+     }
+
+     .block:hover {
+         border-left: 5px solid #ccc;
+         background: #eee;
+         transition-duration: 200ms;
+     }
+</style>
+
+<!-- For the full list of available Crowd HTML Elements and their
+input/output documentation,
+       please refer to
+https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html
+-->
+
+<!-- You must include crowd-form so that your task submits answers to
+MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+   <!--<crowd-instructions link-text="View instructions"
+link-type="button">-->
+   <!--  <short-summary>-->
+   <!--    <p>Provide a brief instruction here</p>-->
+   <!--  </short-summary>-->
+
+   <!--  <detailed-instructions>-->
+   <!--    <h3>Provide more detailed instructions here</h3>-->
+   <!--    <p>Include additional information</p>-->
+   <!--  </detailed-instructions>-->
+
+   <!--  <positive-example>-->
+   <!--    <p>Provide an example of a good answer here</p>-->
+   <!--    <p>Explain why it's a good answer</p>-->
+   <!--  </positive-example>-->
+
+   <!--  <negative-example>-->
+   <!--    <p>Provide an example of a bad answer here</p>-->
+   <!--    <p>Explain why it's a bad answer</p>-->
+   <!--  </negative-example>-->
+   <!--</crowd-instructions>-->
+
+   <div class="block">
+         <p>To be qualified for this study, you must be at least 18
+years old and <B>not color-blind</B> (you'll need to see colors).
+         The task must be done on a computer (desktop or laptop; no
+tablets or mobile phones); the webpage does not work on IE or Edge.</p>
+         <p>Please go to <a target="_blank"
+href="http://128.2.218.129:8080/compare.html?category=ganquan">this
+link</a> (in case the server is not working, use <a target="_blank" href="http://74.109.239.64/compare.html?category=ganquan">this backup</a>);
+         finish the task, and then come back to this page to complete a very brief
+questionnaire at the end.</p>
+   </div>
+
+   <div class="block">
+     <p>In this task you decided which of two pictures was more complex.
+     Various factors may have influenced your choices.  In the next text
+box, please type
+     as complete a description as you can, regarding whatever factors
+influenced you to
+     decide that one picture was more complex than the other.
+     (There are no right or wrong answers here.)</p>
+     <crowd-input name="criteria" placeholder="Type your answer here" required></crowd-input>
+     <p>Tangential or unresponsive answers will be rejected.</p>
+   </div>
+
+   <div class="block">
+       <p>What is your gender?</p>
+       <input id="1A" type="radio" value="male" name="gender"><label
+for="1A">Male</label>
+     <br>
+       <input id="1B" type="radio" value="female" name="gender"><label
+for="1B">Female</label>
+     <br>
+   </div>
+
+   <div class="block">
+       <p>Is your vision normal (correctable to 20/20 with glasses or
+contact lenses)?</p>
+       <input id="2A" type="radio" value="normal" name="vision"><label
+for="2A">I have normal vision.</label>
+     <br>
+       <input id="2B" type="radio" value="far-sighted"
+name="vision"><label for="2B">I am far-sighted.</label>
+     <br>
+       <input id="2C" type="radio" value="near-sighted"
+name="vision"><label for="2C">I am near-sighted.</label>
+     <br>
+       <input id="2D" type="radio" value="other vision" name="vision">
+       <label for="2D">I have other conditions:
+         <span><crowd-input name="other vision condition"
+placeholder="Please specify"></crowd-input></span>
+       </label>
+     <br>
+   </div>
+
+   <div class="block">
+       <p>Any visual impairment (e.g., color-blindness)? If you have none, please type "none".</p>
+       <crowd-input name="visual impairment" placeholder="Please specify" required></crowd-input>
+   </div>
+
+   <div class="block">
+       <p>Any hand/arm injuries or impairments? If you have none, please
+type "none".</p>
+       <crowd-input name="limb impairment" placeholder="Please specify"
+required></crowd-input>
+   </div>
+
+   <div class="block">
+       <p>Your education level?</p>
+       <input id="3A" type="radio" value="HS" name="education"><label
+for="3A">High School</label>
+     <br>
+       <input id="3B" type="radio" value="SomeCollege"
+name="education"><label for="3B">Some college</label>
+     <br>
+       <input id="3C" type="radio" value="CollegeGrad"
+name="education"><label for="3C">College graduate</label>
+     <br>
+       <input id="3D" type="radio" value="SomeGrad"
+name="education"><label for="3D">Some graduate school</label>
+     <br>
+       <input id="3E" type="radio" value="GradSchool"
+name="education"><label for="3E">Graduate school</label>
+     <br>
+       <input id="3F" type="radio" value="Other school"
+name="education"><label for="3F">None of the above</label>
+
+
+   </div>
+
+   <div class="block">
+     <p>Your age?</p>
+     <crowd-input name="age" placeholder="Please specify" required></crowd-input>
+   </div>
+
+   <div class="block">
+     <p>How much understanding do you have of steganography?</p>
+     <input id="4A" type="radio" value="1" name="prevExp"><label
+for="4A">I have never heard of such a thing.</label>
+     <br>
+     <input id="4B" type="radio" value="2" name="prevExp"><label
+for="4B">I am aware of what it is for.</label>
+     <br>
+     <input id="4C" type="radio" value="3" name="prevExp"><label
+for="4C">I understand how it functions.</label>
+     <br>
+     <input id="4D" type="radio" value="4" name="prevExp"><label
+for="4D">I am an expert in the field.</label>
+   </div>
+
+   <div class="block">
+     <p>Was the task too long for you?</p>
+     <input id="5A" type="radio" value="1" name="studyLength"><label
+for="5A">Yes</label>
+     <br>
+     <input id="5B" type="radio" value="2" name="studyLength"><label
+for="5B">No</label>
+     <br>
+   </div>
+
+   <div class="block">
+     <p>Do you have any feedback for the study designers?</p>
+     <crowd-text-area name="feedbackForStudy" rows="4" placeholder="I
+think..." required></crowd-text-area>
+   </div>
+</crowd-form>

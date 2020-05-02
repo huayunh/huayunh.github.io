@@ -1,0 +1,349 @@
+get.preference.matrix('log/RoyOfficeSupply/1574798433420.json')
+thurstone(get.preference.matrix('log/RoyOfficeSupply/1574798433420.json'))
+write.table(get.score.matrix('log/MTurkTextiles'),file="./log/textiles.csv", sep=",")
+get.overall.score.vector('log/MTurkTextiles')
+get.overall.score.vector('log/MTurkTextiles')$estimate
+source('parse.R')
+write.table(get.score.matrix('./log/MTurkOfficeSupply'), file="./log/officeSupply.csv", sep=",")
+e <- get.overall.score.vector('./log/MTurkOfficeSupply')
+e$estimate
+e
+e <- get.overall.score.vector('./log/MTurkOfficeSupply')
+e$estimate
+e
+source('power analysis/thurstone_power_analysis.R')
+thurstone.power.analysis(59, e$estimate, num.runs=1000)
+thurstone.power.analysis.on.stability(50, './log/MTurkOfficeSupply', e$estimate)
+thurstone.power.analysis.on.stability(60, './log/MTurkOfficeSupply', e$estimate)
+thurstone.power.analysis.on.stability(55, './log/MTurkOfficeSupply', e$estimate)
+thurstone.power.analysis.on.stability(55, './log/MTurkOfficeSupply', e$estimate, 100)
+thurstone.power.analysis.on.stability(53, './log/MTurkOfficeSupply', e$estimate, 100)
+thurstone.power.analysis.on.stability(50, './log/MTurkOfficeSupply', e$estimate, 100)
+thurstone.power.analysis.on.stability(40, './log/MTurkOfficeSupply', e$estimate, 100)
+thurstone.power.analysis.on.stability(30, './log/MTurkOfficeSupply', e$estimate, 100)
+thurstone.power.analysis.on.stability(10, './log/MTurkOfficeSupply', e$estimate, 100)
+thurstone.power.analysis.on.stability(5, './log/MTurkOfficeSupply', e$estimate, runs=100)
+thurstone.power.analysis.on.stability(55, './log/MTurkOfficeSupply', e$estimate, runs=100)
+thurstone.power.analysis(70, e$estimate, num.runs=1000)
+thurstone.power.analysis(80, e$estimate, num.runs=1000)
+thurstone.power.analysis(90, e$estimate, num.runs=1000)
+thurstone.power.analysis(110, e$estimate, num.runs=1000)
+thurstone.power.analysis(120, e$estimate, num.runs=1000)
+thurstone.power.analysis(140, e$estimate, num.runs=1000)
+thurstone.power.analysis(140, e$estimate, num.runs=10000)
+e <- get.overall.score.vector('./log/MTurkOfficeSupply')
+e$estimate
+e <- get.overall.score.vector('./log/MTurkOfficeSupply')
+e
+e$estimate
+e <- get.overall.score.vector('./log/MTurkOfficeSupply')
+e
+e$estimate
+print.all.subjects('./log/disqualified/MTurkOfficeSupply')
+write.table(get.score.matrix('./log/MTurkOfficeSupply2'), file="./log/officeSupply2.csv", sep=",")
+e <- get.overall.score.vector('./log/MTurkTextiles')
+e
+model <- e$estimate
+model
+thurstone.power.analysis(60, e$estimate, num.runs=1000)
+thurstone.power.analysis(70, e$estimate, num.runs=1000)
+thurstone.power.analysis(90, e$estimate, num.runs=1000)
+thurstone.power.analysis(110, e$estimate, num.runs=1000)
+105
+thurstone.power.analysis(105, e$estimate, num.runs=1000)
+thurstone.power.analysis(100, e$estimate, num.runs=1000)
+thurstone.power.analysis(95, e$estimate, num.runs=1000)
+thurstone.power.analysis(100, e$estimate, num.runs=10000)
+thurstone.power.analysis.on.stability(100, './log/MTurkTextiles', model, runs=100)
+thurstone.power.analysis.on.stability(60, './log/MTurkTextiles', model, runs=100)
+thurstone.power.analysis.on.stability(62, './log/MTurkTextiles', model, runs=1000)
+M1 <- get.overall.preference.matrix('log/MTurkOfficeSupply')
+M1
+M2 <- get.overall.preference.matrix('log/disqualified/MTurkOfficeSupply')
+M3 <- get.overall.preference.matrix('log/disqualified/RoyOfficeSupply')
+M3 <- get.overall.preference.matrix('log/RoyOfficeSupply')
+M4 <- get.overall.preference.matrix('log/MTurkOfficeSupply2')
+M <- M1 + M2 + M3 + M4
+thurstone(M)
+e <- thurstone(M)
+e$estimate
+M4 <- get.overall.preference.matrix('log/MTurkOfficeSupply2')
+M <- M1 + M3 + M4
+e <- thurstone(M)
+e
+e$estimate
+model <- e$estimate
+thurstone.power.analysis(140, model)
+thurstone.power.analysis(160, model, runs = 2000)
+thurstone.power.analysis(160, model, num.runs = 2000)
+thurstone.power.analysis(190, model, num.runs = 2000)
+thurstone.power.analysis(200, model, num.runs = 2000)
+source('power analysis/thurstone_power_analysis.R')
+thurstone.power.analysis.on.stability(70, 'log/MTurkOfficeSupply2', model)
+source('power analysis/thurstone_power_analysis.R')
+thurstone.power.analysis.on.stability(70, 'log/MTurkOfficeSupply2', model)
+source('power analysis/thurstone_power_analysis.R')
+thurstone.power.analysis.on.stability(70, 'log/MTurkOfficeSupply2', model)
+thurstone.power.analysis.on.stability(120, 'log/MTurkOfficeSupply2', model)
+thurstone.power.analysis.on.stability(120, 'log/temp', model)
+thurstone.power.analysis.on.stability(120, 'log/temp', model, num.runs=100)
+thurstone.power.analysis.on.stability(130, 'log/temp', model, num.runs=100)
+thurstone(M1)
+thurstone(M4)
+print.all.subjects('log/disqualified/MTurkOfficeSupply')
+print.all.subjects('log/disqualified/MTurkOfficeSupply2')
+M4 <- get.overall.preference.matrix('log/MTurkOfficeSupply2')
+thurstone(M4)
+M <- M1 + M3 + M4
+thurstone(M)
+thurstone(M)$estimate
+model <- thurstone(M)$estimate
+thurstone.power.analysis(200, model, num.runs = 1000)
+thurstone.power.analysis(210, model, num.runs = 1000)
+thurstone.power.analysis(220, model, num.runs = 1000)
+thurstone.power.analysis(215, model, num.runs = 1000)
+thurstone.power.analysis(220, model, num.runs = 10000)
+print.all.subjects('log/MTurkOfficeSupply2')
+print.all.subjects('log/MTurkOfficeSupply2', TRUE)
+M4 <- get.overall.preference.matrix('log/MTurkOfficeSupply2')
+M <- M1 + M3 + M4
+thurstone(M)
+thurstone(M)$estimate
+print.all.subjects('log/disqualified/MTurkOfficeSupply2')
+print.all.subjects('log/MTurkTextiles2', TRUE, 'officeSupply')
+print.all.subjects('log/MTurkOfficeSupply3', TRUE, 'officeSupply')
+print.all.subjects('log/MTurkOfficeSupply3', TRUE, 'textiles')
+write.table(get.score.matrix('./log/MTurkTextiles2'), file="./log/textiles.csv", sep=",")
+M1 <- get.score.matrix('./log/MTurkTextiles')
+M2 <- get.score.matrix('log/disqualified/MTurkTextiles')
+M3 <- get.score.matrix('log/MTurkTextiles2')
+M <- M1 + M2 + M3
+M1 <- get.score.matrix('./log/MTurkTextiles')
+M1 <- get.overall.preference.matrix('./log/MTurkTextiles')
+M2 <- get.overall.preference.matrix('log/disqualified/MTurkTextiles')
+M3 <- get.overall.preference.matrix('log/MTurkTextiles2')
+M <- M1 + M2 + M3
+M
+thurstone(M)
+thurstone(M) $ estimate
+M3 <- get.overall.preference.matrix('log/MTurkTextiles2')
+M4 <- get.overall.preference.matrix('log/disqualified/MTurkTextiles2')
+M <- M1 + M3
+thurstone(M)
+thurstone(M)$estimate
+model <- thurstone(M)$estimate
+thurstone.power.analysis(100, model, num.runs = 1000)
+thurstone.power.analysis(110, model, num.runs = 1000)
+thurstone.power.analysis(105, model, num.runs = 1000)
+thurstone.power.analysis(105, model, num.runs = 10000)
+thurstone.power.analysis.on.stability(70, 'log/temp', model)
+thurstone.power.analysis.on.stability(90, 'log/temp', model)
+thurstone.power.analysis.on.stability(90, 'log/temp', model, num.runs = 100)
+print.all.subjects('log/disqualified/MTurkTextiles2')
+write.table(get.score.matrix('./log/MTurkOfficeSupply3'), file="./log/officeSupply.csv", sep=",")
+M1 <- get.overall.preference.matrix('log/MTurkOfficeSupply') + get.overall.preference.matrix('log/MTurkOfficeSupply2') + get.overall.preference.matrix('log/MTurkOfficeSupply3')
+M1
+M2 <- get.overall.preference.matrix('log/disqualified/MTurkOfficeSupply') + get.overall.preference.matrix('log/disqualified/MTurkOfficeSupply2') + get.overall.preference.matrix('log/disqualified/MTurkOfficeSupply3')
+M1 <- M1 + get.overall.preference.matrix('log/RoyOfficeSupply')
+thurstone(M1)
+thurstone(M1 + M2)
+thurstone(M1 + M2) $ estimate
+model <- thurstone(M1) $ estimate
+model
+print.all.subjects('log/MTurkOfficeSupply3')
+thurstone.power.analysis(220, model, num.runs = 1000)
+thurstone.power.analysis(240, model, num.runs = 1000)
+thurstone.power.analysis(270, model, num.runs = 1000)
+thurstone.power.analysis(290, model, num.runs = 1000)
+thurstone.power.analysis(280, model, num.runs = 1000)
+thurstone.power.analysis.on.stability(100,'log/temp', model, num.runs = 1000)
+thurstone.power.analysis.on.stability(100,'log/temp', model, num.runs = 10)
+thurstone.power.analysis.on.stability(240,'log/temp', model, num.runs = 10)
+thurstone.power.analysis.on.stability(180,'log/temp', model, num.runs = 10)
+thurstone.power.analysis.on.stability(190,'log/temp', model, num.runs = 10)
+thurstone.power.analysis.on.stability(210,'log/temp', model, num.runs = 10)
+thurstone.power.analysis.on.stability(210,'log/temp', model, num.runs = 100)
+source(parse.R)
+source('parse.R')
+write.table(get.score.matrix('./log/MTurkOfficeSupply4'), file="./log/abstract.csv", sep=",")
+M1 <- get.overall.preference.matrix('./log/MTurkOfficeSupply') + get.overall.preference.matrix('./log/MTurkOfficeSupply2') + get.overall.preference.matrix('./log/MTurkOfficeSupply3') + get.overall.preference.matrix('./log/MTurkOfficeSupply4') +
+;
+M1 <- get.overall.preference.matrix('./log/MTurkOfficeSupply') + get.overall.preference.matrix('./log/MTurkOfficeSupply2') + get.overall.preference.matrix('./log/MTurkOfficeSupply3') + get.overall.preference.matrix('./log/MTurkOfficeSupply4')
+M1
+M2 <- get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply') + get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply2') + get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply3') + get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply4')
+M2
+thurstone (M1 + M2)
+thurstone (M1 + M2) $ estimate
+thurstone (M1) $ estimate
+model <- thurstone (M1) $ estimate
+thurstone(M1)
+source('power analysis/thurstone_power_analysis.R')
+thurstone.power.analysis(290, model, num.runs)
+thurstone.power.analysis(290, model, num.runs=1000)
+thurstone.power.analysis(290, model, num.runs=10000)
+thurstone.power.analysis(293, model, num.runs=10000)
+print.all.subjects('./log/MTurkOfficeSupply4', TRUE)
+print.all.subjects('./log/MTurkOfficeSupply4')
+thurstone.power.analysis(297, model, num.runs=10000)
+write.table(get.score.matrix('./log/MTurkOfficeSupply4/temp/jsonfiles121919'), file="./log/abstract.csv", sep=",")
+M2 <- get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply') + get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply2') + get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply3') + get.overall.preference.matrix('./log/disqualified/MTurkOfficeSupply4')
+M2
+M1 <- get.overall.preference.matrix('./log/MTurkOfficeSupply') + get.overall.preference.matrix('./log/MTurkOfficeSupply2') + get.overall.preference.matrix('./log/MTurkOfficeSupply3') + get.overall.preference.matrix('./log/MTurkOfficeSupply4')
+thurstone(M1) $ estimate
+model <- thurstone(M1) $ estimate
+thurstone.power.analysis(298, model, num.runs=1000)
+M2
+M1
+thurstone.power.analysis(298, model, num.runs=1000)
+thurstone(M1)
+thurstone(M1+M2) $ estimate
+thurstone.power.analysis.on.stability(240, 'log/temp', model)
+thurstone.power.analysis.on.stability(260, 'log/temp', model)
+thurstone.power.analysis.on.stability(260, 'log/temp', model, num.runs=100)
+thurstone.power.analysis.on.stability(250, 'log/temp', model, num.runs=100)
+thurstone.power.analysis.on.stability(255, 'log/temp', model, num.runs=100)
+source('parse.R')
+write.table(get.score.matrix('./log/MTurkMeta'), file="./log/meta.csv", sep=","
+;
+write.table(get.score.matrix('./log/MTurkMeta'), file="./log/meta.csv", sep=",")
+get.overall.score.vector('./log/MTurkMeta')
+model <- get.overall.score.vector('./log/MTurkMeta') $ estimate
+model
+source('power analysis/thurstone_power_analysis.R')
+thurstone.power.analysis(30, model)
+thurstone.power.analysis(30, model, num.runs=1000)
+thurstone.power.analysis(80, model, num.runs=1000)
+print.all.subjects('./log/MTurkMeta')
+thurstone.power.analysis(70, model, num.runs=1000)
+thurstone.power.analysis(72, model, num.runs=1000)
+print.all.subjects('./log/MTurkMeta2')
+write.table(get.score.matrix('./log/MTurkMeta2'), file="./log/meta2.csv", sep=",")
+M1 <- get.overall.preference.matrix('log/disqualified/MTurkMeta2')
+M2 <- get.overall.preference.matrix('log/MTurkMeta') + get.overall.preference.matrix('log/MTurkMeta2')
+M2
+M1
+thurstone(M2)
+thurstone(M1 + M2)
+thurstone(M2) $ estimate
+model <- thurstone(M2) $ estimate
+thurstone.power.analysis(80, model, num.runs=1000)
+thurstone.power.analysis(70, model, num.runs=100)
+thurstone.power.analysis(70, model, num.runs=1000)
+thurstone.power.analysis(60, model, num.runs=1000)
+thurstone.power.analysis(55, model, num.runs=1000)
+thurstone.power.analysis(57, model, num.runs=10000)
+thurstone.power.analysis(58, model, num.runs=10000)
+M3 <- get.overall.preference.matrix('log/MTurkMeta2')
+thurstone(M3)
+source('parse.R')
+get.overall.preference.matrix('log/MTurkClouds')+get.overall.preference.matrix('log/MTurkClouds2')
+M <- get.overall.preference.matrix('log/MTurkClouds')+get.overall.preference.matrix('log/MTurkClouds2')
+thurstone(M) $ estimate
+thurstone(get.overall.preference.matrix('log/MTurkFullFramePlants'))
+thurstone(get.overall.preference.matrix('log/MTurkFullFramePlants'))$estimate
+thurstone(get.overall.preference.matrix('log/MTurkAbstract')+get.overall.preference.matrix('log/MTurkAbstract2')+get.overall.preference.matrix('log/MTurkAbstract3'))$estimate
+thurstone(get.overall.preference.matrix('log/EnglandAbstract')+get.overall.preference.matrix('log/MTurkAbstract')+get.overall.preference.matrix('log/MTurkAbstract2')+get.overall.preference.matrix('log/MTurkAbstract3'))$estimate
+H <- c(-2.67578369,#
+-1.81332099,#
+-1.37294329,#
+-1.0796735,#
+-0.83264873,#
+-0.62887519,#
+-0.507149763,#
+-0.47495089,#
+-0.31567431,#
+-0.265616917,#
+-0.24936729,#
+-0.22049937,#
+-0.21938463,#
+0,#
+0.00689171,#
+0.06008686,#
+0.08665293,#
+0.08717183,#
+0.10704762,#
+0.1077976,#
+0.12523041,#
+0.12680201,#
+0.138122454,#
+0.15492384,#
+0.15846912,#
+0.18057127,#
+0.24773154,#
+0.24888031,#
+0.28549659,#
+0.30826394,#
+0.31406833,#
+0.341830222,#
+0.36184807,#
+0.36760083,#
+0.41182062,#
+0.4539045,#
+0.456800749,#
+0.47073164,#
+0.54338545,#
+0.54825694,#
+0.58781271,#
+0.619388188,#
+0.621276155,#
+0.628604599,#
+0.64575543,#
+0.68419548,#
+0.7154562,#
+0.73118416,#
+0.75202339,#
+0.77171096,#
+0.78512782,#
+0.81303471,#
+0.83691843,#
+0.84802638,#
+0.87589669,#
+0.88171433,#
+0.8871037,#
+0.90277674,#
+0.918555416,#
+0.92666689,#
+0.94674848,#
+0.97670424,#
+1.01041957,#
+1.02403688,#
+1.02485564,#
+1.02562963,#
+1.03645221,#
+1.06878274,#
+1.06932808,#
+1.07137736,#
+1.09489962,#
+1.11331793,#
+1.12657367,#
+1.1754276,#
+1.19773795,#
+1.21671228,#
+1.32627061,#
+1.34167843,#
+1.380214,#
+1.419891,#
+1.48174569,#
+1.48388223,#
+1.51835853,#
+1.54342832,#
+1.55701441,#
+1.56440943,#
+1.57423463,#
+1.67445156,#
+1.76306186,#
+1.84945887,#
+2.01780156,#
+2.06778811,#
+2.204646,#
+2.803342,#
+3.312333,#
+3.377742,#
+3.640536,#
+3.661152,#
+3.684416,#
+3.949305)
+c
+H
+hist(H)
+hist(H)

@@ -1,0 +1,19 @@
+,#,1,2,3,4,5,6,7,8,9,10,11,12,
+,altText,qokjviw,uvbslqp,nvskdfp,whalsvm,qupxsaz,ajlbwwl,pqkacle,ganquan,wtstshr,nvimask,plytwir,tgwcnmb,
+,category,bricks,bokeh,abstract,pattern,fullframeplants,treeBark,carnival,clouds,bokeh2,textiles,officeSupply,meta,
+1,1.jpg,1220,1130,1049,890,1720,1892,1088,2474,847,1948,2792,2792,officeSupply1
+2,2.jpg,1221,1365,1010,1263,1721,2275,1089,2493,1141,1953,2794,2493,clouds5
+3,3.jpg,1225,1386,1015,1547,1745,2284,1090,2507,1198,1961,2795,1635,pattern6
+4,4.jpg,1228,1560,1025,1549,1807,2329,1092,2512,1569,1962,2796,2343,treeBark5
+5,5.jpg,1801,1572,1062,1632,1812,2343,1100,2519,1615,1969,2797,1225,bricks3
+6,6.jpg,1881,1602,1018,1635,1845,2384,1102,2580,1619,1982,2819,1569,bokeh24
+7,7.jpg,1883,1658,1029,1691,1848,2385,1104,2620,1687,1983,2799,1658,bokeh7
+8,8.jpg,1885,1703,1041,1695,1852,2391,1112,2639,1762,1992,2809,1852,fullframeplants8
+9,9.jpg,1894,1813,1046,1879,1854,2403,1114,2645,1909,2015,2815,1041,abstract8
+10,10.jpg,1896,1912,1035,1905,1861,2404,1118,2647,2003,2744,2816,2744,textiles10
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,How to Use: ,,,,,,,,,,,,,
+,The leftmost column refers to the photo file name in each folder,,,,,,,,,,,,,
+,"The second column and the columns to its right logs its number. For example, 1049 means ""DSC_1049.raw"", 890 means ""DSC_0890.raw""",,,,,,,,,,,,,
+,"altText is the alternative text that can be passed as the category parameter in the URL. (So category=0 is equivalent to category=qokjviw, which is bricks)",,,,,,,,,,,,,

@@ -1,0 +1,25 @@
+,,,,,Comparison Task,,,,Post-Experiment Survey,,,,,,,Note
+Log Folder,Category,Batch Name,Time,average completion time,Log Files Received,Questionable Log Files,Valid Log Files,% Valid,CSV File From Amazon ,Num of Subjects We Asked For,Total Subjects Involved,Rejected,Approved,% Approved,Survey CSV Data Integrated Into,
+EnglandClouds,Clouds,-,"August 19, 2019",-,13,1,12,92.31%,-,13,13,-,-,-,-,collected during Roy’s England Trip
+MTurkClouds,Clouds,Steganography Clouds ,"September 29, 2019",10m 52s,22,6,16,72.73%,Batch_3783332_batch_results.csv,50,86,36,50,58.14%,MTurkClouds.csv,
+MTurkAbstract,Abstract,Steganography Abstract,"October 8, 2019",9m 10s,20,10,10,50.00%,Batch_3794095_batch_results.csv,500,20,2,18,90.00%,MTurkAbstract.csv,
+MTurkFullFramePlants,FullFramePlants,Steganography Abstract,"October 8, 2019",9m 10s,504,24,480,95.24%,Batch_3794095_batch_results.csv,-,531,37,494,93.03%,MTurkFFP.csv,
+EnglandAbstract,Abstract,-,"October 11, 2019",-,13,0,13,100.00%,-,13,13,-,-,-,EnglandAbstract.txt,collected during Roy’s England Trip
+MTurkClouds2,Clouds,Steganography Clouds 2,"October 16, 2019",12m 21s,74,7,67,90.54%,Batch_3803620_batch_results.csv,50,73,23,50,68.49%,MTurkClouds.csv,
+MTurkAbstract2,Abstract,Steganography Abstract 2,"October 20, 2019",14m 54s,47,6,41,87.23%,Batch_3807545_batch_results.csv,40,44,7,37,84.09%,MTurkAbstract.csv,
+MTurkAbstract3,Abstract,Steganography Abstract 3,"October 23, 2019",14m 42s,7,1,6,85.71%,Batch_3811668_batch_results.csv,6,7,1,6,85.71%,MTurkAbstract.csv,
+MTurkBricks,Bricks,Steganography Bricks,"October 25, 2019",10m 11s,78,6,72,92.31%,Batch_3814523_batch_results.csv,80,80,26,54,67.50%,MTurkBricks.csv,
+MTurkPattern,Pattern,Steganography Pattern,"October 25, 2019",13m 42s,6,1,5,83.33%,Batch_3814534_batch_results.csv,9,9,6,3,33.33%,MTurkPattern.csv,
+MTurkTextiles,Textiles,Steganography Textiles,"October 25, 2019",7m 49s,71,3,68,95.77%,Batch_3814573_batch_results.csv,80,78,4,74,94.87%,MTurkTextiles.csv,require Master Turkers
+MTurkPattern2,Pattern,Steganography Pattern 2,"October 28, 2019",12m 29s,89,12,77,86.52%,Batch_3816536_batch_results.csv,80,89,15,74,83.15%,MTurkPattern.csv,
+MTurkTreeBark,TreeBark,Steganography TreeBark,"October 29, 2019",12m 40s,82,8,74,90.24%,Batch_3817931_batch_results.csv,80,80,16,64,80.00%,MTurkTreeBark.csv,
+MTurkBokeh,bokeh,Steganography Bokeh,"November 3, 2019",12m 22s,74,13,61,82.43%,Batch_3823060_batch_results.csv,70,70,16,54,77.14%,MTurkBokeh.csv,
+MTurkBokeh2,bokeh2,Steganography Bokeh2,"November 4, 2019",11m,69,14,55,79.71%,Batch_3824087_batch_results.csv,70,70,20,50,71.43%,MTurkBokeh2.csv,
+RoyOfficeSupply,OfficeSupply,-,"November 26, 2019",-,1,0,1,100.00%,-,1,1,-,-,-,-,Roy did this
+MTurkOfficeSupply,OfficeSupply,Steganography OfficeSupply,"November 26, 2019",13m 6s,70,15,55,78.57%,Batch_3850013_batch_results.csv,70,70,27,43,61.43%,MTurkOfficeSupply.csv,
+MTurkOfficeSupply2,OfficeSupply,Steganography OfficeSupply 2,"Dec 3, 2019",11m 28s,92,5,87,94.57%,Batch_3857215_batch_results.csv,90,90,21,69,76.67%,MTurkOfficeSupply.csv,
+MTurkOfficeSupply3,OfficeSupply,Steganography OfficeSupply 3,"Dec 11, 2019",9m 21s,99,3,96,96.97%,Batch_3866629_batch_results.csv,90,104,22,82,78.85%,MTurkOfficeSupply.csv,
+MTurkTextiles2,Textiles,Steganography Textiles 2,"Dec 11, 2019",11m 21s,53,9,44,83.02%,Batch_3866732_batch_results.csv,50,50,9,41,82.00%,MTurkTextiles.csv,
+MTurkOfficeSupply4,OfficeSupply,Steganography OfficeSupply 4,"Dec 18, 2019",10m 15s,63,4,59,93.65%,Batch_3873233_batch_results.csv,55,61,13,48,78.69%,MTurkOfficeSupply.csv,
+MTurkMeta,Meta,Steganography Meta,"Dec 24, 2019",8m 44s,31,0,31,100.00%,Batch_3877587_batch_results.csv,30,30,0,30,100.00%,MTurkMeta.csv,require Master Turkers
+MTurkMeta2,Meta,Steganography Meta 2,"Dec 27, 2019",13m 15s,57,3,54,94.74%,Batch_3878914_batch_results.csv,55,55,0,55,100.00%,MTurkMeta.csv,decided to use up all the money and not reject anyone

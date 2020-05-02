@@ -1,0 +1,257 @@
+Count,Reason
+Category: Abstract,
+36,more contrast / shadows / colors
+21,"number of color patches, different shapes"
+6,"more fine details, more dense"
+5,clarity
+4,more patterns / texture
+3,meaningful / remind me things
+3,more attractive
+3,"harder to identify, more confusing"
+3,"how busy, “how much is going on”"
+3,more long lines
+2,"more painting technique involved, splashing v non splashing"
+2,"more separate, more colors in different areas"
+2,more layers of paint
+2,arrangement / less structualized
+2,more 3D feeling
+2,"harder to reproduce, by speech or by painting"
+1,"more interesting as if they are maps, city maps more complex than rural maps"
+1,more like continent
+1,less like continent
+1,longer to reveal itself
+1,texture of applied materials
+1,"mentally hard, longer to process through the image mentally"
+1,brighter colors
+Category: Bokeh,
+13,more color /shades
+8,background (not specified enough)
+6,number of different shapes / species / patterns of flowers
+6,more pedals or leaves
+6,more details
+5,"higher resolution, better photo qualities"
+4,"structure, form of group"
+3,more background blur
+3,depth of field (not specified enough)
+3,brighter
+3,attractive
+2,complex pedals
+2,complex (abstract) shapes
+2,difficulty in making judgement / capturing
+2,contains substantial information
+2,harder to redraw
+1,“higher focus”
+1,more noise in the background
+1,some species are naturally more complex (like marigold more complex than rose)
+1,more thoughts coming up
+1,background more dull
+1,darker
+1,size of the main object in focus
+Category: Bokeh2,
+27,"more colors, shades"
+12,amount of details
+8,blurry background / depth of field
+5,more flowers
+5,more elements/objects
+4,busy / more going on
+3,compositions / flowers arranged in complicated ways
+3,high-level photo quality (might mean how many details they can see)
+3,shapes
+3,attractive / artistic photo that invokes feeling
+3,has more layers or dimensions
+2,more objects in the background
+2,diversity of objects
+2,harder to describe to someone
+2,“background”
+1,more stems
+1,types of flower
+1,can see more flower parts
+1,can tell objects from each other
+1,background seems unknown and abstract
+1,textures
+1,harder to draw
+1,structure in the foreground was multifaceted
+1,quantity of pixels
+1,the one with the largest flowers
+Category: Bricks,
+17,more colors
+13,more patterns
+9,more texture
+8,Harder to draw
+8,"more blurry, clarity. quality of the photo"
+8,level of detail
+7,More lines
+6,non-uniform
+5,more structure
+4,more shapes
+3,noisy / busy
+3,"condition of bricks, bricks formation"
+3,reflections
+3,harder to put together
+2,more changes in gaps and grid breaks
+2,"more non brick objects, diversity of content"
+2,more shade
+2,attraction
+2,more depth / opacities
+2,more materials involved
+2,changed directions
+1,harder for my eyes to scan
+1,harder to describe to other people
+1,more designed
+1,loosely stacked / cemented together
+1,more moving parts
+Category: Clouds,
+45,More clouds (can mean both cloud size and number of cloud pieces)
+41,"More colors / contrast / shades (number of colors, darker = more complex)"
+22,More varieties in clouds formation
+11,More details
+7,"Clouds more ""blurred"" together / more irregular (cannot tell one cloud from another)"
+7,"More ""busy"" (""more going on"")"
+4,More attractive
+3,Harder to draw for an artist
+1,More words to describe
+Category: FullFramePlants,based on first 250 subjects
+98,"More contrast/shadows/colors, "
+62,"More variety, Concerns more about individual plants. More plant parts, more shapes, more species"
+45,"more details, more dense, higher “resolution”"
+44,"More visual elements, More leaves, more blades"
+20,"Depth of field, More layers"
+15,"more randomness, concerns more about arrangement"
+12,"longer to draw, take me / artist longer to draw"
+9,"size of objects, smaller = simpler"
+8,"more grass, "
+6,"More bright, More clear"
+6,"more design, more meaningful"
+6,"more attractive, visually attractive; “looks healthy”"
+6,"gut feeling, "
+5,"more flowers, "
+3,"sense of movement, change of things"
+3,"sharpness, easily visible, "
+3,"presence of unique object, pic with one flower more complex than pic with lots of blades"
+3,"longer to discern, "
+2,"less bright, "
+2,"color saturation, "
+2,"more possible “atoms”, "
+2,"more “involvement”, "
+1,"the one I find harder to focus, "
+1,"less attractive, "
+1,"harder to rectify, "
+1,"harder to reproduce, "
+1,"intricate shape close together, "
+1,"least contrast, "
+1,"the one that makes me hesitate on their complexity, "
+1,"requires more computing power to render, "
+1,"more disturbing and unconfortable, "
+1,"least common in everyday life, "
+1,"number of countables, “grass are uncountable, one flower countable, so grasses less complex than one flower”"
+1,physical distortion
+Category: Meta,
+22,color
+20,"amount of items, uncountable"
+8,"amount of details, density"
+7,"resolution, clarity"
+6,"pattern, repetition, texture"
+4,shape
+4,difficulty in reproducing image
+4,color contract
+3,structures
+3,"more thought-provoking, more meanings"
+3,"more messy, more activities"
+2,edges
+2,"abstraction, complex subjects"
+2,more depth of field
+2,more complicated design
+2,less uniformity
+2,"hard to imagine, hard to understand"
+2,more attractive
+1,blurriness of background
+1,good design
+1,type of items
+1,nature > man-made
+1,rarity of composition
+1,more granular
+1,less rigid structure
+1,dark
+1,bright
+1,difficult to describe
+1,interwined
+1,cannot see properly
+1,prevalent color / shape making picture more character
+1,classification
+Category: OfficeSupply,based on first 80 subjects approved
+37,more objects
+22,more colors
+18,more painted / overlapping lines
+11,"more going on, activities, messy, chaotic, busy"
+7,more layers or depth
+7,more crumpled paper
+5,"more mental effort needed, more confusing"
+4,more details
+2,roughness
+2,"more movement, uneven drawings"
+2,textures
+2,number of shapes
+2,number of shadows
+2,types of object
+1,use small papers
+1,irregular shape
+1,more edges
+1,more information
+1,gloomy
+1,color contrast
+1,clarity
+1,difficult to reproduce
+1,more point of interests for my eyes
+1,my brain process slower
+Category: Textiles,Collected from the batch created Oct 25
+29,More lines / wrinkles / folds / non-flat
+27,color
+18,more than one sheet / multiple pieces of cloth / amount of items
+16,has a pattern / structure / pattern (unspecified)
+14,complex design / composition
+13,texture
+13,disorder / randomness / has a random pattern / disturbance to material / variety
+6,shadow / light
+6,shape
+6,depth / level variation
+3,more patterns
+3,more going on / busy
+2,more details
+2,"more to process, either by human or by a computer"
+2,print
+2,hard to create the items in the picture / redraw
+1,fabric more twisted
+1,more facets
+1,more technical
+1,movement
+1,item thickness
+1,harder to generate by computer
+1,more vivid
+1,regularity
+1,dull and dark
+1,less attractive
+1,less cluttered
+Category: TreeBark,
+17,shadows / color / contrast
+13,texture / rough surface
+11,more details
+10,"better quality, less blurred"
+9,more lines (in different direction)
+8,more depth / layers / structures
+3,more visual elements
+3,different shapes
+3,randomness
+3,interwoven
+3,"rarest seen, in real life or on the internet"
+2,more busy
+2,"more “interesting"""
+2,pattern
+2,more attractive / artistry
+2,harder to understand
+1,tree barks look older
+1,tree bark always more complex than wood
+1,gradient surface
+1,variations in item size
+1,gut feeling
+1,harder to draw
+1,more geometric shapes

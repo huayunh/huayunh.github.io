@@ -41,6 +41,12 @@ h2.instructions {
 	border-color: #63BBFF;
 }
 
+#error-message {
+	font-size: 80%;
+	color: red;
+	margin-top: 0.5em;
+}
+
 .images {
 	width: 80vw;
 	max-width: 800px;

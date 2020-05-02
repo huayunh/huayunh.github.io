@@ -1,0 +1,4 @@
+source('parse.R')
+get.overall.preference.matrix('../../log/MTurkOfficeSupply')+get.overall.preference.matrix('../../log/MTurkOfficeSupply2')+get.overall.preference.matrix('../../log/MTurkOfficeSupply3')+get.overall.preference.matrix('../../log/MTurkOfficeSupply4')
+M <- get.overall.preference.matrix('../../log/MTurkOfficeSupply')+get.overall.preference.matrix('../../log/MTurkOfficeSupply2')+get.overall.preference.matrix('../../log/MTurkOfficeSupply3')+get.overall.preference.matrix('../../log/MTurkOfficeSupply4')
+thurstone(M) $ estimate
